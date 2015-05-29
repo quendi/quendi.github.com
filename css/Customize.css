@@ -1,0 +1,48 @@
+body{
+	padding: 5%;
+	padding-top: 180px;		/* Set in html, not work in css file */
+	min-width: 350px;		/* suppose you want minimun width of 750px */
+	width: auto !important;	/* Firefox will set width as auto */
+	width: 350px;			/* As IE ignores !important it will set width as 750px; */
+	
+	font-family: 微軟正黑體; "Microsoft JhengHei", sans-serif;
+	font-size:145%;
+	
+	background-repeat: repeat; 
+}
+			
+.row-padded {
+	padding: 1%;
+	background-color: #FFE8E8;
+	border-radius: 15px;
+}
+			
+<!-- Style Settings for Map import -->
+html, body, #map-canvas {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}			
+.map_container{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+			
+.map_container .map_canvas{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/****************************************************************
+@media (max-width: 978px) {
+	body {
+		padding:2%;
+	}
+}
+****************************************************************/

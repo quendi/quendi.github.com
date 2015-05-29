@@ -12,6 +12,7 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/font-awesome.css" rel="stylesheet">
+		<link href="css/Customize.css" rel="stylesheet">
 	
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,53 +23,8 @@
 		
 		<style type="text/css">			
 			body{
-				padding: 5%;
-				padding-top: 65px;
-				min-width: 200px;		/* suppose you want minimun width of 750px */
-				width: auto !important;	/* Firefox will set width as auto */
-				width: 200px;			/* As IE ignores !important it will set width as 750px; */
-				
-				font-family: 微軟正黑體; "Microsoft JhengHei", sans-serif;
-				font-size:145%;
-				
-				background-repeat: repeat; 
+				padding-top: 80px;
 			}
-			
-			.row-padded {
-				padding: 2%;
-				background-color: #FFE8E8;
-				border-radius: 15px;
-			}
-			
-			<!-- Style Settings for Map import -->
-			html, body, #map-canvas {
-				margin: 0;
-				padding: 0;
-				height: 100%;
-			}			
-			.map_container{
-				position: relative;
-				width: 100%;
-				padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
-			}
-			
-			.map_container .map_canvas{
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				margin: 0;
-				padding: 0;
-			}
-			
-			<!--
-			@media (max-width: 978px) {
-				body {
-					padding:2%;
-				}
-			}
-			-->
 		</style>
 	</head>
 	
@@ -125,7 +81,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">自行開車、騎車</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">開車、騎車</a>
 								</h4>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse">

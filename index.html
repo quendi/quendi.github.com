@@ -51,6 +51,9 @@
   min-width: 100%;
   height: 500px;
 }
+
+.en, .zh, .it { display:none; } /* hide all elements with a language class */
+.en:lang(en), .zh:lang(zh), .it:lang(it) { display:block; } /* show those elements that match their language class */
 		</style>
 	</head>
 	
@@ -76,6 +79,10 @@
 				</ul>
 			</div>
 		</div>	
+		
+		<div class="en">Good morning</div>
+<div class="zh">Guten Morgen</div>
+<div class="it">Ciao</div>
 
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -154,7 +161,13 @@
     </div> <!-- /container -->
 
 
+<p>This example demonstrates the browserLanguage property, for IE10 and earlier versions.</p>
 
+<p>Click the button to display the language of your browser.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
 
 
 
@@ -225,6 +238,12 @@
 }
 		});
 		//end of modal google map
+		
+		
+		function myFunction() {
+    var x = "Language of the browser: " + navigator.browserLanguage;
+    document.getElementById("demo").innerHTML = x;
+}
 		</script>
 	</body>
 </html>
