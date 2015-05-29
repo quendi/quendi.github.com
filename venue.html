@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
 		</style>
 	</head>
 	
-	<body>
+	<body class="zh">
 		<!-- Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -46,7 +46,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index.html"><i class="fa fa-info"></i></a></li>
 					<li><a href="#">Link</a></li>
-					<li class="active"><a href="venue.html">婚宴資訊&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li class="active" lang="zh"><a href="venue.html">婚宴資訊&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li class="active" lang="en"><a href="venue.html">Party Information&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 				</ul>
 			</div>
 		</div>	
@@ -139,6 +140,7 @@
 					zoom: 15,
 					mapTypeControl: false,
 					panControl:false,
+			});
 					rotateControl:false,
 					streetViewControl: false,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -194,6 +196,13 @@
 			else
 				$('body').css('background', 'url(img/bg_img1.png)');
 			});
-		</script> 
+		</script>
+		
+		<script type="text/javascript">
+			$(window).load(function() { 
+				if(window.navigator.language == en || window.navigator.language == en-us || window.navigator.language == en-gb)
+					document.body.className = document.body.className.replace("zh", "en");
+			});
+		</script>
 	</body>
 </html>
