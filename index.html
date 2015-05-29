@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,8 +52,6 @@
   height: 500px;
 }
 
-.en, .zh, .it { display:none; } /* hide all elements with a language class */
-.en:lang(en), .zh:lang(zh), .it:lang(it) { display:block; } /* show those elements that match their language class */
 		</style>
 	</head>
 	
@@ -80,9 +78,8 @@
 			</div>
 		</div>	
 		
-		<div class="en">Good morning</div>
-<div class="zh">Guten Morgen</div>
-<div class="it">Ciao</div>
+		<div lang="en">Good morning</div>
+<div lang="zh">Guten Morgen</div>
 
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -165,9 +162,9 @@
 
 <p>Click the button to display the language of your browser.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="GetLangInfo()">Try it</button>
 
-<p id="demo"></p>
+<p id="output"></p>
 
 
 
@@ -241,9 +238,31 @@
 		
 		
 		function myFunction() {
-    var x = "Language of the browser: " + navigator.browserLanguage;
+    var x = "Language of the browser: " + window.navigator.language;
     document.getElementById("demo").innerHTML = x;
 }
+
+        function GetLangInfo () {
+            var message = "";
+            message += "Language of the browser: " + window.navigator.language;
+
+            message += "<br />Operating system: " + window.navigator.platform;
+            if (window.navigator.language === undefined) {  
+                // in Opera, the language, browserLanguage and userLanguage properties are equivalent
+                message += "<br />Language of the operating system's user interface: " + window.navigator.browserLanguage;
+                message += "<br />Regional and Language settings of the operating system: " + window.navigator.userLanguage;
+            }
+            message += "<br />Language of the installed operating system: " + window.navigator.systemLanguage;
+
+            var output = document.getElementById ("output");
+            output.innerHTML = message;
+        }
+		
+		$(window).load(function() { 
+			var la = window.navigator.language;
+			document.body.className = document.body.className.replace("zh", "en");
+
+			});
 		</script>
 	</body>
 </html>
