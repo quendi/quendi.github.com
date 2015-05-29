@@ -244,7 +244,7 @@
 
         function GetLangInfo () {
             var message = "";
-            message += "Language of the browser: " + window.navigator.language;
+            message += "Language of the browser: " + window.navigator.language[0,1] + window.navigator.language[1] +"(" +window.navigator.language + ")";
 
             message += "<br />Operating system: " + window.navigator.platform;
             if (window.navigator.language === undefined) {  

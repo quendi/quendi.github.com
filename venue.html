@@ -28,7 +28,7 @@
 		</style>
 	</head>
 	
-	<body class="zh">
+	<body class="en">
 		<!-- Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -200,7 +200,8 @@
 		
 		<script type="text/javascript">
 			$(window).load(function() { 
-				if(window.navigator.language == en || window.navigator.language == en-US || window.navigator.language == en-GB)
+			var lang = window.navigator.language[0] + window.navigator.language[1];
+				if(lang == "en")
 					document.body.className = document.body.className.replace("zh", "en");
 			});
 		</script>
