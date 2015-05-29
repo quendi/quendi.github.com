@@ -12,11 +12,19 @@ body{
 }
 			
 .row-padded {
-	padding: 1%;
-	background-color: #FFE8E8;
+	padding: 2%;
+	background-color: #F5EBFF;
 	border-radius: 15px;
 }
-			
+
+.panel-heading {
+	background:#EBD6FF !important;
+}
+
+.panel-body {
+	background:#F5EBFF !important;
+}
+
 <!-- Style Settings for Map import -->
 html, body, #map-canvas {
 	margin: 0;
@@ -46,6 +54,31 @@ html, body, #map-canvas {
 	}
 }
 ****************************************************************/
+
+/* unvisited link */
+a:link {
+	color: #52527A;
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+	color: #52527A;
+	text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+	color: #9494B8;
+	text-decoration: none;
+	/* font-weight: bold; */
+}
+
+/* selected link */
+a:active {
+	color: #52527A;
+	text-decoration: none;
+}	
 
 body.en :lang(zh) {
   display: none;
