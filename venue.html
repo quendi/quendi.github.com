@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>
-			x
+			Chun-Chieh Lee & Yi-Chun Hsiao | Wedding Reception
 		</title>
 
 		<!-- Bootstrap -->
@@ -29,6 +29,10 @@
 			body{
 				padding-top: 80px;
 			}
+			
+			.row-padded{
+				padding-top: 30px;
+			}
 		</style>
 	</head>
 	
@@ -48,23 +52,29 @@
 			<!-- Collection of nav links, forms, and other content for toggling -->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html"><i class="fa fa-info"></i></a></li>
-					<li><a href="#">Link</a></li>
+					<li lang="zh"><a href="index.html">首頁</a></li>
+					<li lang="en"><a href="index.html">Home</a></li>
 					<li class="active" lang="zh"><a href="venue.html">婚宴資訊</a></li>
 					<li class="active" lang="en"><a href="venue.html">Wedding Reception</a></li>
-					<li class="button" lang="en"><a href="#" onclick="ChangeLang()">&nbsp;&nbsp;中文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-					<li class="button" lang="zh"><a href="#" onclick="ChangeLang()">English&nbsp;&nbsp;&nbsp;</a></li>
+					<li lang="zh"><a href="attendance.html">婚宴出席調查</a></li>
+					<li lang="en"><a href="attendance.html">Attendance</a></li>
+					<li lang="zh"><a href="travel.html">旅遊資訊</a></li>
+					<li lang="en"><a href="travel.html">Travel in Tainan</a></li>
+					<li lang="zh"><a href="housing.html">住宿資訊</a></li>
+					<li lang="en"><a href="housing.html">Housing</a></li>
+					<li lang="zh"><a href="contact_us.html">聯絡我們</a></li>
+					<li lang="en"><a href="contact_us.html">Contact us</a></li>
+					<li lang="en"><a href="#" onclick="ChangeLang()"><small>中文</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li lang="zh"><a href="#" onclick="ChangeLang()"><small>English</small>&nbsp;&nbsp;&nbsp;</a></li>
 				</ul>
 			</div>
-			
-
 		</div>	
 
 		<div class="container-fluid">
 			<div class="row  row-padded">
 				<!-- Wedding Information in Chinese -->
 				<div class="col-md-6 col-lg-6" lang="zh">
-					<p style="font-size: 18pt; color: dark gray">婚宴資訊 <small><small> (台南場)</small></small></p>
+					<p style="font-size: 16pt; color: dark gray"><strong>婚宴資訊 <small><small> (台南場)</small></small></strong></p>
 					<p class="text-muted" style="font-size: 14pt"><strong>時間 :</strong><small> 2015.11.1 (日)  中午12:00開席</small></p>
 					<p class="text-muted" style="font-size: 14pt"><strong>席設 :</strong><small> 大億麗緻酒店</small></p>
 					<p class="text-muted" style="font-size: 14pt"><strong>地址 :</strong><small> 台南市西門路一段660號&nbsp;&nbsp;&nbsp;</small>					
@@ -74,14 +84,14 @@
 				</div>
 				<!-- Wedding Information in English -->
 				<div class="col-md-6 col-lg-6 " lang="en">
-					<p style="font-size: 18pt; color: dark gray; font-family: 'Architects Daughter', cursive"><strong>The Wedding Reception</strong></p>
+					<p style="font-size: 16pt; color: dark gray; font-family: 'Architects Daughter', cursive"><strong>The Wedding Reception</strong></p>
 					<p style="line-height: 120%;">&nbsp;</p>
-					<p class="text-muted" style="font-size: 14pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">On Sunday, the first of November</p>
-					<p class="text-muted" style="font-size: 14pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">two thousand and fifteen</p>
-					<p class="text-muted" style="font-size: 14pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">at twelve o’clock in the afternoon</p>
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">On Sunday, the first of November</p>
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">two thousand and fifteen</p>
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">at twelve o’clock in the afternoon</p>
 					<p style="line-height: 120%;">&nbsp;</p>
-					<p class="text-muted" style="font-size: 14pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">Tayih Landis Hotel Tainan</p>					
-					<p class="text-muted" style="font-size: 14pt; font-family: 'Architects Daughter', cursive; line-height: 100%;">No. 660, Section 1, Shi-Men Road, Tainan, Taiwan&nbsp;
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">Tayih Landis Hotel Tainan</p>					
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 100%;">No. 660, Section 1, Shi-Men Road, Tainan, Taiwan&nbsp;
 						<a href="https://www.google.com.tw/maps/place/大億麗緻酒店/@22.9898291,120.1939253,16z/" role="button" target="_blank"><img src="img/map.png" width="28pt" ></a>
 					</p>
 					<p>&nbsp;</p>
@@ -100,17 +110,19 @@
 					<p>&nbsp;</p>
 				</div>
 				
-				<div class="col-md-12 col-lg-12 ">
+				<div class="col-md-12 col-lg-12">
 					<div class="panel-group" id="accordion">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">開車、騎車</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="zh">開車、騎車</a>									
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="en">Driving</a>
 								</h4>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p></p>
+									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
+									<p lang="zh">停車場入場方向如下圖所示:</p>
 								</div>
 							</div>
 						</div>
@@ -118,12 +130,29 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">搭乘高鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" lang="zh">搭飛機</a>									
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" lang="en">Take airplane</a>
 								</h4>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p></p>
+									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
+									<p lang="zh">停車場入場方向如下圖所示:</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="zh">搭乘高鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="en">Take THSR (Taiwan High Speed Rail)</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">搭乘台灣高鐵的來賓可轉乘免費的高鐵接駁專車前往宴會場。</p>
+									<p lang="zh">停車場入場方向如下圖所示:</p>
 								</div>
 							</div>
 						</div>
@@ -131,12 +160,29 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">							
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style=a>搭乘台鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="zh">搭乘台鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="en">Take Railway</a>
 								</h4>
 							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
+							<div id="collapseFour" class="panel-collapse collapse">
 								<div class="panel-body">
-									<p></p>
+									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
+									<p lang="zh">停車場入場方向如下圖所示:</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">							
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="zh">搭乘國道客運</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="en">Take Bus</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
+									<p lang="zh">停車場入場方向如下圖所示:</p>
 								</div>
 							</div>
 						</div>
