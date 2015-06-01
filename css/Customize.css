@@ -10,6 +10,13 @@ body{
 	
 	background-repeat: repeat; 
 }
+
+.modal-dialog {
+	position: absolute;
+	width: 80%;
+	top: 30%;
+	left: 10%;
+}
 			
 .row-padded {
 	padding: 2%;
