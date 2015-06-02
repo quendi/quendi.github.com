@@ -86,7 +86,8 @@
 							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請留下您的真實姓名，以便我們日後寄喜帖給您。</p>
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please use your real name, so we could mail you the invitation.</p>
 							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
-								<input type="text" class="form-control" name="entry.205605236" id="name" required>
+								<input type="text" class="form-control" name="entry.474095820" id="name" required>
+								<span class="glyphicon form-control-feedback" id="name_g"></span>
 							</div>
 						</div>
 						
@@ -97,6 +98,7 @@
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please fill in any possible way that can reach you, or keep it blank.</p>
 							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
 								<input type="text" class="form-control" name="entry.1116024617" id="info" required>
+								<span class="glyphicon form-control-feedback" id="info_g"></span>
 							</div>
 						</div>
 						
@@ -104,23 +106,144 @@
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;">E-Mail</label><label style="font-size: 12pt; color: red;  line-height: 50%;">&nbsp;*</label></p>	
 							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
-							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
-								<textarea class="form-control" rows="6" name="entry.1916295821" id="message" required></textarea>
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.1116024617" id="info" required>
 								<span class="glyphicon form-control-feedback" id="message_g"></span>
 							</div>
 						</div>
-						
 						
 						<div class="form-group has-success has-feedback">
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">聯絡地址</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
 							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您的聯絡電話，如手機、信箱、Facebook或是Line</p>
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please fill in any possible way that can reach you, or keep it blank.</p>
-							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
 								<textarea class="form-control" rows="6" name="entry.1916295821" id="message" required></textarea>
 								<span class="glyphicon form-control-feedback" id="message_g"></span>
 							</div>
 						</div>
+						
+						<div class="bg-danger" id="perfer_block" style="margin-left: -4%; margin-right: -4%; margin-right: -4%;">
+							<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">出席人數</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-primary btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-primary btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-primary btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+							</div>
+							
+							<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">兒童</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-warning btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-warning btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-warning btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+							</div>
+							
+														<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">兒童</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-success btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-success btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-success btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+							</div>
+							
+														<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">兒童</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-info btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-info btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-info btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+							</div>
+							
+														<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">兒童</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+							</div>
+							
+																				<div class="form-group has-success has-feedback" style="margin-left: 2%;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">兒童</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+								<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+								<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" >
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+</label>
+								</div>
+								
+																<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" >
+																<p><label style="font-size: 11pt; color: gray; " lang="zh">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</label></p>
+																<p>
+<label class="radio-inline" style="margin-top: -60px;" >
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+</label>
+<label class="radio-inline" style="margin-top: -60px;" >
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+</label>
+<label class="radio-inline" style="margin-top: -60px;" >
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+</label>
+</p>
+								</div>
+							</div>
+							<p>&nbsp;</p>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">出席意願</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+							<div class="checkbox col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -10px; margin-left: -7px;">
+								<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="" name="entry.1116024617" id="chk_xxx" onchange="chk_change(this)">無法出席婚宴，但我想要喜帖</label>
+								<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="" name="entry.1116024617" id="chk_xxx" onchange="chk_change(this)">xx</label>
+							</div>
+						</div>
+						
+
 						
 						<div class="form-group has-success has-feedback">
 							<div>
@@ -130,8 +253,8 @@
 						
 						<!-- <button type="submit" class="btn btn-primary" lang="zh">遞交表單</button> -->
 						<!-- <button type="submit" class="btn btn-primary" lang="en">Submit</button> -->
-						<button type="button" class="btn btn-info" onclick="monitor()" lang="zh">遞交表單</button>
-						<button type="button" class="btn btn-info" onclick="monitor()" lang="en">Submit</button>
+						<!-- <button type="button" class="btn btn-info" onclick="monitor()" lang="zh">遞交表單</button>
+						<button type="button" class="btn btn-info" onclick="monitor()" lang="en">Submit</button> -->
 												
 						<!-- Modal -->
 						<div id="SubmitModal" class="modal fade" role="dialog">
@@ -260,6 +383,15 @@
 			$('#SubmitModal').on('hidden.bs.modal', function () {
 				window.location.reload();			
 			})
+			
+			function chk_change(checkbox) {
+				if (checkbox.checked) {
+					document.getElementById("perfer_block").style.display = 'none';
+				}
+				else {
+					document.getElementById("perfer_block").style.display = 'block';
+				}
+			}
 		</script>
 		
 	</body>
