@@ -33,7 +33,30 @@
 			td {
 				border-bottom: 1.5px solid #FF9696;
 				text-align: center;
-			} 
+			}
+			
+			.new_style {
+				border: 0;
+				padding: 0;
+				margin: 5px;
+				margin-right: -8px;
+				text-align: center;
+				background: transparent;
+				width: 60px;
+				font: 20px Vollkorn
+			}
+			
+			.new_style2 {
+				border: 0;
+				padding: 0;
+				margin-left: 12px;
+				width: 100%;
+				background: transparent;
+			}
+			
+			.btn_new {	
+				margin-left: 8px;	
+			}
 		</style>
 	</head>
 	
@@ -121,6 +144,9 @@
 							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">我們會請郵差杯杯把喜帖送到所填寫的地址</p>
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Using the correct mailing address for receiving the invitation.</p>
 							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
+								<label id="twzipcode"></label>
+							</div>
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: 5px; margin-left: -12px;">
 								<textarea class="form-control" rows="6" name="entry.138321243" id="addr" required></textarea>
 								<span class="glyphicon form-control-feedback" id="addr_g"></span>
 							</div>
@@ -130,15 +156,15 @@
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">出席意願</label></p>
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Would you like to attend the wedding?</label></p>								
 							<div class="checkbox col-xs-12 col-sm-12 col-md-11 col-lg-10" style="margin-top: -10px; margin-left: -7px;">
-								<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)">無法出席婚宴，但我想要喜帖</label>
-								<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)">I'm not able to attend the wedding, but I would like the invitation.</label>
+								<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)" id="attendance">無法出席婚宴，但我想要喜帖</label>
+								<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)" id="attendance">I'm not able to join the wedding, but I would like the invitation.</label>
 							</div>
 						</div>
 						
 						<div class="bg-danger" id="perfer_block" style="margin-left: -30px; margin-top:30px;">
 							<div class="form-group has-success has-feedback" style="margin-left: 15px; ">
 								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">出席人數</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
-								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">How many people will come to the wedding?</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">How many people will join the wedding?</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>
 								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;">
 									<table class="table" style="width:80px;">
 										<tr>
@@ -147,9 +173,9 @@
 											<td><label>3</label></td>
 											<td><label>4</label></td>
 											<td><label>5</label></td>
-										</tr>									
+										</tr>								
 										<tr role="radiogroup">
-											<td><div><input type="radio" name="entry.1020267687" value="1" id="people_2" role="radio" required></div></td>
+											<td><div><input type="radio" name="entry.1020267687" value="1" id="people_2" role="radio"></div></td>
 											<td><div><input type="radio" name="entry.1020267687" value="2" id="people_3" role="radio"></div></td>
 											<td><div><input type="radio" name="entry.1020267687" value="3" id="people_4" role="radio"></div></td>
 											<td><div><input type="radio" name="entry.1020267687" value="4" id="people_5" role="radio"></div></td>
@@ -193,34 +219,24 @@
 								</div>
 							</div>
 							
-							<label class="ss-q-item-label" for="entry_408845164"><div class="ss-q-title">飲食習慣
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="group" aria-label="飲食習慣  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1144105956" value="&#33911;&#39135;" id="group_1144105956_1" role="checkbox" class="ss-q-checkbox"></span>
-<span class="ss-choice-label">葷食</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1144105956" value="&#32032;&#39135;" id="group_1144105956_2" role="checkbox" class="ss-q-checkbox"></span>
-<span class="ss-choice-label">素食</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1144105956" value="__other_option__" id="group_1144105956_3" role="checkbox" class="ss-q-checkbox ss-q-other-toggle"></span>
-<span class="ss-choice-label">Other:</span></label>
-<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.1144105956.other_option_response" value="" class="ss-q-other" id="entry_1144105956_other_option_response" dir="auto" aria-label="Other"></span>
-</li></ul>
-							
 							<div class="form-group has-success has-feedback" style="margin-left: 15px;margin-top:-5px;">
 								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">飲食習慣</label></p>
 								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 10px; font-family: 'Architects Daughter', cursive;" lang="en">Dietary preferences</label></p>								
 								<div class="checkbox col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -10px; margin-left: -7px;">
-									<div>
-										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="" name="entry.1144105956" id="diet_1">不吃牛</label>
-										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="" name="entry.1144105956" id="diet_1">No beef</label>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#29275;" id="diet_1">不吃牛</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#29275;" id="diet_e1">No beef</label>
 									</div>
-									<div>
-										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="" name="entry.1144105956" id="diet_2">不吃豬</label>
-										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="" name="entry.1144105956" id="diet_2">No pork</label>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#35948;" id="diet_2">不吃豬</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#35948;" id="diet_e2">No pork</label>
 									</div>
-									<div>
-										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="" name="entry.1144105956" id="diet_3">茹素</label>
-										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="" name="entry.1144105956" id="diet_3">Vegetarian</label>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#33593;&#32032;" id="diet_3">茹素</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#33593;&#32032;" id="diet_e3">Vegetarian</label>
+									</div>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="__other_option__" id="diet_4">其他需求: <input type="text" name="entry.1144105956.other_option_response" value="" id="diet_input"></label>
 									</div>
 								</div>
 							</div>
@@ -232,19 +248,17 @@
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Wedding wishes</label></p>								
 							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
 								<textarea class="form-control" rows="6" name="entry.467563562" id="wish"></textarea>
-								<span class="glyphicon form-control-feedback" id="wish_g"></span>
 							</div>
 						</div>
 						
 						
 						<div class="form-group has-success has-feedback">
 							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">其他需求</label></p>
-							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Other required</label></p>								
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Other requirements</label></p>								
 							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">若有任何需要我們協助的地方、再麻煩您不吝告知</p>
 							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please let us know if you need more help.</p>
 							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
 								<textarea class="form-control" rows="6" name="entry.1555130583" id="need"></textarea>
-								<span class="glyphicon form-control-feedback" id="need_g"></span>
 							</div>
 						</div>
 						
@@ -264,9 +278,29 @@
 							<div class="modal-dialog">
 								<!-- Modal content-->
 								<div class="modal-content">
-									<div class="modal-body" style="text-align: center;">
-										<p style="font-size: 12pt; color: gray;" lang="zh">感謝您的留言，我們將盡快與您聯繫。</p>
-										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">Thanks for you message, we will get back to you ASAP.</p>
+									<div class="modal-body">
+										<p style="font-size: 12pt; color: gray;" lang="zh">請確認您的資料是否正確。</p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">Please confirm your information.</p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="name_chk_cht"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="name_chk_eng"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="tel_chk_cht"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="tel_chk_eng"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="email_chk_cht"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="email_chk_eng"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="addr_chk_cht"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="addr_chk_eng"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="attendance_chk_cht"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="attendance_chk_eng"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="people_chk_cht" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="people_chk_eng" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="child_chk_cht" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="child_chk_eng" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="prefer_chk_cht" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="prefer_chk_eng" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="wish_chk_cht" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="wish_chk_eng" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="need_chk_cht" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="need_chk_eng" hidden></p>
 									</div>
 									<div class="modal-footer" style="text-align: center;">
 										<button type="submit" class="btn btn-default" onclick="monitor()" lang="zh">確認</button>
@@ -286,11 +320,17 @@
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/jquery-1.11.3.min.js"></script>	
 		<script src="js/bootstrap.min.js"></script>		
 		<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
-		<script src="js/jquery.validate.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		
+		<script src="js/jquery.twzipcode-1.7.0.js"></script>
+		<script type="text/javascript">		
+			$('#twzipcode').twzipcode();
+		</script>
 		
 		<script type="text/javascript">
 			var today = new Date();
@@ -325,11 +365,26 @@
 				}					
 			}
 
-			var required_msg = "必要欄位, Required Field";			
+			var required_msg = "必要欄位, Required Field.";
+			var email_msg = "E-mail格式不符, Please enter a valid email address.";
 			$(window).load(function(){
 				$('form').validate({    
 					rules: {
 						"entry.362471959": {
+							required: true
+						},
+						"entry.1559158161": {
+							required: true
+						},
+						"entry.1907224416": {
+							required: true,
+							email: true
+						},
+						"entry.138321243": {
+							required: true,
+							minlength: 17
+						},
+						"entry.1020267687": {
 							required: true
 						}
 					},
@@ -355,6 +410,12 @@
 					messages: {
 						"entry.362471959": {
 							required: required_msg
+						},
+						"entry.138321243": {
+							minlength: "請輸入完整的地址唷, please enter a valid address."
+						},
+						"entry.1020267687": {
+							required: ""
 						}
 					}
 				});
@@ -372,11 +433,168 @@
 			function checkform() 
 			{				
 				if( $("#form_submit").valid() ) {
+					get_modal_value();					
 					$('#SubmitModal').modal('show');
 				}
 				else {
+					$("#form_submit").validate().focusInvalid();
 					//alert("Name must be filled out");
 				}
+			}
+			
+			function get_modal_value() 
+			{
+				document.getElementById("name_chk_cht").value = "姓名: " + document.getElementById("name").value;
+				document.getElementById("name_chk_eng").value = "Name: " + document.getElementById("name").value;
+				
+				document.getElementById("tel_chk_cht").value = "聯絡電話: " + document.getElementById("tel").value;
+				document.getElementById("tel_chk_eng").value = "Phone number: " + document.getElementById("tel").value;
+				
+				document.getElementById("email_chk_cht").value = "E-Mail: " + document.getElementById("mail").value;
+				document.getElementById("email_chk_eng").value = "E-Mail: " + document.getElementById("mail").value;
+				
+				document.getElementById("addr_chk_cht").value = "聯絡地址: " + document.getElementById("addr").value;
+				document.getElementById("addr_chk_eng").value = "Address: " + document.getElementById("addr").value;
+				
+				if( !document.getElementById("attendance").checked){
+					document.getElementById("attendance_chk_cht").value = "您會出席我們的喜宴";
+					document.getElementById("attendance_chk_eng").value = "You will join our wedding";	
+					
+					if( document.getElementById("people_2").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 1";
+						document.getElementById("people_chk_eng").value = "1 person will join the wedding";
+					}
+					else if( document.getElementById("people_3").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 2";
+						document.getElementById("people_chk_eng").value = "2 people will join the wedding";
+					}
+					else if( document.getElementById("people_4").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 3";
+						document.getElementById("people_chk_eng").value = "3 people will join the wedding";
+					}
+					else if( document.getElementById("people_5").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 4";
+						document.getElementById("people_chk_eng").value = "4 people will join the wedding";
+					}
+					else if( document.getElementById("people_6").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 5";
+						document.getElementById("people_chk_eng").value = "5 people will join the wedding";
+					}
+					document.getElementById("people_chk_cht").removeAttribute("hidden");		
+					document.getElementById("people_chk_eng").removeAttribute("hidden");
+					
+					if( document.getElementById("child_1").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 0";
+						document.getElementById("child_chk_eng").value = "You don't need any baby high chair";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_2").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 1";
+						document.getElementById("child_chk_eng").value = "You need 1 baby high chair";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_3").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 2";
+						document.getElementById("child_chk_eng").value = "You need 2 baby high chairs";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_4").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 3";
+						document.getElementById("child_chk_eng").value = "You need 3 baby high chairs";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_5").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 4";
+						document.getElementById("child_chk_eng").value = "You need 4 baby high chairs";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+
+														
+					if( document.getElementById("diet_1").checked || document.getElementById("diet_2").checked || document.getElementById("diet_3").checked || document.getElementById("diet_4").checked ) {
+						document.getElementById("prefer_chk_cht").value = "飲食習慣: ";
+						document.getElementById("prefer_chk_cht").removeAttribute("hidden");		
+						
+						if(document.getElementById("diet_1").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_1").value + " ";
+							
+						if(document.getElementById("diet_2").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_2").value + " ";
+							
+						if(document.getElementById("diet_3").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_3").value + " ";
+							
+						if(document.getElementById("diet_4").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_input").value;
+					} else {
+						document.getElementById("prefer_chk_cht").setAttribute("class", "hidden");						
+					}
+					
+					if( document.getElementById("diet_e1").checked || document.getElementById("diet_e2").checked || document.getElementById("diet_e3").checked ) {
+						document.getElementById("prefer_chk_eng").value = "Dietary preferences: ";
+						document.getElementById("prefer_chk_eng").removeAttribute("hidden");	
+						
+						if(document.getElementById("diet_e1").checked)
+							document.getElementById("prefer_chk_eng").value += "No beef, ";	
+							
+						if(document.getElementById("diet_e2").checked)
+							document.getElementById("prefer_chk_eng").value += "No pork, ";		
+							
+						if(document.getElementById("diet_e3").checked)
+							document.getElementById("prefer_chk_eng").value += "Vegetarian";	
+							
+					} else {
+						document.getElementById("prefer_chk_eng").setAttribute("class", "hidden");							
+					}
+
+				}
+				else {
+					document.getElementById("attendance_chk_cht").value = "您無法出席婚宴，但願意收到喜帖";
+					document.getElementById("attendance_chk_eng").value = "You're not able to join the wedding, but still want to get the invitation";
+					
+					document.getElementById("people_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("people_chk_eng").setAttribute("class", "hidden");	
+					
+					document.getElementById("child_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("child_chk_eng").setAttribute("class", "hidden");	
+					
+					document.getElementById("prefer_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("prefer_chk_eng").setAttribute("class", "hidden");		
+				}
+				
+				if( document.getElementById("wish").value != "" ) {
+					document.getElementById("wish_chk_cht").value = "想跟新人說的悄悄話: " + document.getElementById("wish").value;
+					document.getElementById("wish_chk_cht").removeAttribute("hidden");
+					document.getElementById("wish_chk_eng").value = "Wedding wishes: " + document.getElementById("wish").value;		
+					document.getElementById("wish_chk_eng").removeAttribute("hidden");
+				}
+				else {
+					document.getElementById("wish_chk_cht").value = "";
+					document.getElementById("wish_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("wish_chk_eng").value = "";		
+					document.getElementById("wish_chk_eng").setAttribute("class", "hidden");		
+				}
+				
+				if( document.getElementById("need").value != "" ) {
+					document.getElementById("need_chk_cht").value = "其他需求: " + document.getElementById("need").value;
+					document.getElementById("need_chk_cht").removeAttribute("hidden");
+					document.getElementById("need_chk_eng").value = "Other requirements: " + document.getElementById("need").value;
+					document.getElementById("need_chk_eng").removeAttribute("hidden");
+				}
+				else {				
+					document.getElementById("need_chk_cht").value = "";
+					document.getElementById("need_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("need_chk_eng").value = "";
+					document.getElementById("need_chk_eng").setAttribute("class", "hidden");
+				}
+
+				
+				document.getElementById("need_chk_cht").value = "其他需求: " + document.getElementById("need").value;
+				document.getElementById("need_chk_eng").value = "Other requirements: " + document.getElementById("need").value;
 			}
 			
 			function submitted() 
