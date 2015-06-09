@@ -41,27 +41,34 @@
 				}
 			}
 			
+			h2 {
+				color: #3D3D5C;
+				font-size: 22px;
+				margin-bottom: 5px;
+				font-family: 'Ubuntu', sans-serif;
+			}
+			
 			.timer_box{
-				margin: 35px 24px;
+				margin: 10px 20px;
 				display: inline-block;
 				padding: 20px 12px 0px 12px;
 				text-align: center;
-				width: 115px;
-				height: 110px;
+				width: 95px;
+				height: 90px;
 				border-radius: 50%;
-				border: 4px solid rgba(255, 204, 255, .6);
+				border: 4px solid rgba(255, 189, 255, .5);
 			}
 			
 			.timer_box h1{
-				font-size: 40px;
+				font-size: 32px;
 				margin-top: -2px;
 				margin-bottom: 0px;
 				font-family: 'Ubuntu', sans-serif;
-				color: #FFCCFF;
+				color: #FFBDFF;
 			}			
 			
 			.timer_box h5{
-				font-size: 18px;
+				font-size: 14px;
 				margin-top: -10px;
 				margin-bottom: 5px;
 				font-family: 'Ubuntu', sans-serif;
@@ -81,6 +88,28 @@
 	</head>
 	
 	<body class="zh">
+	
+		<div class="navbar navbar-fixed-bottom">
+			<div class="container" style="text-align: Center" lang="en">
+				<div id="message"></div>
+			</div>
+			<div class="container" style="text-align: Center" lang="zh">
+				<div id="message_cht"></div>
+			</div>
+			<div class="container" style="margin-bottom: 60px; text-align: Center" lang="en">
+				<div id="days" class="timer_box"></div>
+				<div id="hours" class="timer_box"></div>
+				<div id="minutes" class="timer_box"></div>
+				<div id="seconds" class="timer_box"></div>
+			</div>
+			<div class="container" style="margin-bottom: 60px; text-align: Center" lang="zh">
+				<div id="days_cht" class="timer_box"></div>
+				<div id="hours_cht" class="timer_box"></div>
+				<div id="minutes_cht" class="timer_box"></div>
+				<div id="seconds_cht" class="timer_box"></div>
+			</div>
+		</div>
+	
 		<!-- Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -146,15 +175,6 @@
 			</a>
 		</div>
 		
-		<div class="navbar navbar-fixed-bottom">
-			<div class="container">
-				<div id="days" class="timer_box"></div>
-				<div id="hours" class="timer_box"></div>
-				<div id="minutes" class="timer_box"></div>
-				<div id="seconds" class="timer_box"></div>
-			</div>
-		</div>
-		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -163,48 +183,83 @@
 
 		<script type="text/javascript">
 			// set the date we're counting down to
-			var target_date = new Date(2015, 11, 01, 12, 00);
+			var target_date = new Date(2015, 10, 01, 12, 00);
 			
 			// update the tag with id "countdown" every 1 second
 			setInterval(function () {
 				// find the amount of "seconds" between now and target
 				var current_date = new Date();
+				var seconds_left = (target_date - current_date) / 1000;
 				
 				if( target_date < current_date ){
 					days.innerHTML = '<h1>0</h1><p>Day</p>';
 					hours.innerHTML = '<h1>0</h1><p>Hour</p>';
 					minutes.innerHTML = '<h1>0</h1><p>Minute</p>';
-					seconds.innerHTML = '<h1>0</h1><p>Second</p>';				
+					seconds.innerHTML = '<h1>0</h1><p>Second</p>';
+					
+					days_cht.innerHTML = '<h1>0</h1><p>日</p>';
+					hours_cht.innerHTML = '<h1>0</h1><p>時</p>';
+					minutes_cht.innerHTML = '<h1>0</h1><p>分</p>';
+					seconds_cht.innerHTML = '<h1>0</h1><p>秒</p>';	
+
+					var tmp = ( current_date - target_date ) / 1000;
+					
+					if( tmp > 10800 ){
+						message.innerHTML = '<h2>Wedding is over.</h2>';
+						message_cht.innerHTML = '<h2>婚禮已經結束囉</h2>';
+					} 
+					else {
+						message.innerHTML = "<h2>It's wedding time.</h2>";
+						message_cht.innerHTML = '<h2>婚禮進行中</h2>';					
+					}
 				}
 				else {
 					var seconds_left = (target_date - current_date) / 1000;
-				
-					// do some time calculations
+					
 					d = parseInt(seconds_left / 86400);
 					seconds_left = seconds_left % 86400;
-					if( d == 0 )
+					if( d == 0 ) {
 						days.innerHTML = '<h1>0</h1><p><h5><strong>Day</strong></h5></p>';
-					else
+						days_cht.innerHTML = '<h1>0</h1><p><h5><strong>日</strong></h5></p>';
+					}
+					else {
 						days.innerHTML = '<h1>'+d+'</h1><p><h5><strong>Days</strong></h5></p>';
+						days_cht.innerHTML = '<h1>'+d+'</h1><p><h5><strong>日</strong></h5></p>';
+					}
 				
 					h = parseInt(seconds_left / 3600);
 					seconds_left = seconds_left % 3600;
-					if( h == 0 )
+					if( h == 0 ) {
 						hours.innerHTML = '<h1>0</h1><p><h5><strong>Hour</strong></h5></p>';
-					else
+						hours_cht.innerHTML = '<h1>0</h1><p><h5><strong>時</strong></h5></p>';
+					}
+					else {
 						hours.innerHTML = '<h1>'+h+'</h1><p><h5><strong>Hours</strong></h5></p>';
+						hours_cht.innerHTML = '<h1>'+h+'</h1><p><h5><strong>時</strong></h5></p>';
+					}
 				
 					m = parseInt(seconds_left / 60);
-					if( m == 0 )
+					if( m == 0 ) {
 						minutes.innerHTML = '<h1>0</h1><h5><p><strong>Minute</strong></h5></p>';
-					else		
+						minutes_cht.innerHTML = '<h1>0</h1><h5><p><strong>分</strong></h5></p>';
+					}
+					else	{
 						minutes.innerHTML = '<h1>'+m+'</h1><p><h5><strong>Minutes</strong></h5></p>';
+						minutes_cht.innerHTML = '<h1>'+m+'</h1><p><h5><strong>分</strong></h5></p>';
+					}
 					
 					s = parseInt(seconds_left % 60);
-					if( s == 0 )
+					if( s == 0 ) {
 						seconds.innerHTML = '<h1>0</h1><p><h5><strong>Second</strong></h5></p>';
-					else
+						seconds_cht.innerHTML = '<h1>0</h1><p><h5><strong>秒</strong></h5></p>';
+					}
+					else {
 						seconds.innerHTML = '<h1>'+s+'</h1><p><h5><strong>Seconds</strong></h5></p>';
+						seconds_cht.innerHTML = '<h1>'+s+'</h1><p><h5><strong>秒</strong></h5></p>';
+					}
+					
+					message.innerHTML = '<h2>Wedding Countdown</h2>';
+					message_cht.innerHTML = '<h2>距離婚宴只剩下</h2>';
 				}				
 			}, 1000);
 		</script>
@@ -246,7 +301,7 @@
 				});
 				
 				$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
-				$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%', 'opacity': '0.6'});
+				$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%', 'opacity': '0.4'});
 				$('.carousel-inner div.item img').each(function() {
 					var imgSrc = $(this).attr('src');
 					$(this).parent().css({'background': 'url('+imgSrc+') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
