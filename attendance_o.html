@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>
+			Chun-Chieh Lee & Yi-Chun Hsiao | Attendance Form
+		</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
+		<link href="css/Customize.css" rel="stylesheet">
+		
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>				<!-- font-family: 'Vollkorn', serif; -->
+		<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>		<!-- font-family: 'Architects Daughter', cursive; -->
+		<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>		<!-- font-family: 'La Belle Aurore', cursive;  -->
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">			
+			body{
+				padding-top: 80px;
+			}
+			
+			td {
+				border-bottom: 1.5px solid #FF9696;
+				text-align: center;
+			}
+			
+			.new_style {
+				border: 0;
+				padding: 0;
+				margin: 5px;
+				margin-right: -8px;
+				text-align: center;
+				background: transparent;
+				width: 40px;
+				font: 18px Vollkorn
+			}
+			
+			.new_style2 {
+				border: 0;
+				padding: 0;
+				margin-left: 12px;
+				width: 100%;
+				background: transparent;
+			}
+			
+			.btn_new {	
+				margin-left: 8px;	
+			}
+		</style>
+	</head>
+	
+	<body class="zh">
+		<!-- Navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/Brand_icon1.png" width="42pt" style="margin-top: -10px;"></a>
+				<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+			</div>
+			
+			<!-- Collection of nav links, forms, and other content for toggling -->
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li lang="zh"><a href="index.html">首頁</a></li>
+					<li lang="en"><a href="index.html">Home</a></li>
+					<li lang="zh"><a href="venue.html">婚宴資訊</a></li>
+					<li lang="en"><a href="venue.html">Wedding Reception</a></li>
+					<li class="active" lang="zh"><a href="attendance.html">婚宴出席調查</a></li>
+					<li class="active" lang="en"><a href="attendance.html">Attendance</a></li>
+					<li lang="zh"><a href="travel.html">旅遊資訊</a></li>
+					<li lang="en"><a href="travel.html">Travel in Tainan</a></li>
+					<li lang="zh"><a href="housing.html">住宿資訊</a></li>
+					<li lang="en"><a href="housing.html">Housing</a></li>
+					<li lang="zh"><a href="contact_us.html">聯絡我們</a></li>
+					<li lang="en"><a href="contact_us.html">Contact us</a></li>
+					<li lang="en"><a href="#" onclick="ChangeLang()"><small>中文</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li lang="zh"><a href="#" onclick="ChangeLang()"><small>English</small>&nbsp;&nbsp;&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>	
+
+
+		<div class="container-fluid">
+			<div class="row  row-padded">
+				<div class="col-md-12 col-lg-12">
+					<p style="font-size: 16pt; color: dark gray" lang="zh"><strong>婚宴參加意願表單</strong></p>
+					<p style="font-size: 16pt; color: dark gray; font-family: 'Architects Daughter', cursive" lang="en"><strong>Wedding Attendance Form</strong></p>
+					
+					<p style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;&nbsp;* 必要欄位</p>
+					<p style="font-size: 12pt; color: red; font-family: 'Architects Daughter', cursive;  line-height: 50%;" lang="en">&nbsp;&nbsp;* Input Required</p>	
+					
+					<p>&nbsp;</p>				
+					<iframe name="iframe_contact" style="display:none;" onload="redirect()"></iframe>
+					<form name="form_submit" id="form_submit" class="form-horizontal col-md-10 col-lg-10" action="https://docs.google.com/forms/d/1JQOn8YJh4sxOPRKfRl4kQ3yeDM3MWG7nH-kWlpjpnoU/formResponse" method="post" target="iframe_contact" onsubmit="sent_contact=true">
+
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt;" lang="zh">姓名</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; font-family: 'Architects Daughter', cursive;" lang="en">Name</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>	
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請留下您的真實姓名</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please use your real name</p>
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.362471959" id="name" required>
+								<span class="glyphicon form-control-feedback" id="name_g"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">聯絡電話</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Phone number</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.1559158161" id="tel" required>
+								<span class="glyphicon form-control-feedback" id="tel_g"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;">E-Mail</label><label style="font-size: 12pt; color: red;  line-height: 50%;">&nbsp;*</label></p>	
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">我們會使用E-mail來與您確認相關資訊</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">E-mail is required, so we could confirm the information with you.</p>						
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.1907224416" id="mail" required>
+								<span class="glyphicon form-control-feedback" id="mail_g"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">聯絡地址</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Address</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>								
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">我們會請郵差杯杯把喜帖送到所填寫的地址</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Using the correct mailing address for receiving the invitation.</p>
+							<div class="col-xs-12 col-sm-11 col-md-10 col-lg-9" style="margin-top: -5px; margin-left: -12px;">
+								<label id="twzipcode"></label>
+							</div>
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: 5px; margin-left: -12px;">
+								<textarea class="form-control" rows="6" name="entry.138321243" id="addr" required></textarea>
+								<span class="glyphicon form-control-feedback" id="addr_g"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="font-size: 12pt; margin-top: 20px;" lang="zh">出席意願</label></p>
+							<p><label style="font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Would you like to attend the wedding?</label></p>								
+							<div class="checkbox col-xs-12 col-sm-12 col-md-11 col-lg-10" style="margin-top: -10px; margin-left: -7px;">
+								<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)" id="attendance">無法出席婚宴，但我想要喜帖</label>
+								<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" value="1" name="entry.820093067" role="checkbox" onchange="chk_change(this)" id="attendance_e">I'm not able to join the wedding, but I would like the invitation.</label>
+							</div>
+						</div>
+						
+						<div class="bg-danger" id="perfer_block" style="margin-left: -30px; margin-top:30px;">
+							<div class="form-group has-success has-feedback" style="margin-left: 15px; ">
+								<p><label style="font-size: 12pt; margin-top: 20px;" lang="zh">出席人數</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+								<p><label style="font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">How many people will join the wedding?</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;">
+									<table class="table" style="width:80px;">
+										<tr>
+											<td><label>1</label></td>
+											<td><label>2</label></td>
+											<td><label>3</label></td>
+											<td><label>4</label></td>
+											<td><label>5</label></td>
+										</tr>								
+										<tr role="radiogroup">
+											<td><div><input type="radio" name="entry.1020267687" value="1" id="people_2" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1020267687" value="2" id="people_3" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1020267687" value="3" id="people_4" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1020267687" value="4" id="people_5" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1020267687" value="5" id="people_6" role="radio"></div></td>
+										</tr>
+									</table>
+								</div>
+								<!-- ******************************************************************************************************************************
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;" data-toggle="buttons">
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="1" name="entry.1020267687">1</label>
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="2" name="entry.1020267687" >2</label>
+									<label class="btn btn-danger btn-sm">
+										<input type="radio" value="3" name="entry.1020267687" checked="">3</label>
+								</div>
+								******************************************************************************************************************************* -->
+							</div>
+							
+							<div class="form-group has-success has-feedback" style="margin-left: 15px;">
+								<p><label style="font-size: 12pt; " lang="zh">兒童</label></p>
+								<p><label style="font-size: 12pt; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Do you need any baby high chairs?</label></p>								
+								<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">有需要兒童座椅的家長請來這邊登記唷</p>		
+								<div class="btn-group col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -2px; margin-left: -12px;">
+									<table class="table" style="width:80px;">
+										<tr>
+											<td><label>0</label></td>
+											<td><label>1</label></td>
+											<td><label>2</label></td>
+											<td><label>3</label></td>
+											<td><label>4</label></td>
+										</tr>									
+										<tr role="radiogroup">
+											<td><div><input type="radio" name="entry.1970618506" value="0" id="child_1" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1970618506" value="1" id="child_2" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1970618506" value="2" id="child_3" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1970618506" value="3" id="child_4" role="radio"></div></td>
+											<td><div><input type="radio" name="entry.1970618506" value="4" id="child_5" role="radio"></div></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							
+							<div class="form-group has-success has-feedback" style="margin-left: 15px;margin-top:-5px;">
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">飲食習慣</label></p>
+								<p><label style="line-height: 30%; font-size: 12pt; margin-top: 10px; font-family: 'Architects Daughter', cursive;" lang="en">Dietary preferences</label></p>								
+								<div class="checkbox col-xs-11 col-sm-10 col-md-9 col-lg-8" style="margin-top: -10px; margin-left: -7px;">
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#29275;" id="diet_1">不吃牛</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#29275;" id="diet_e1">No beef</label>
+									</div>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#35948;" id="diet_2">不吃豬</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#19981;&#21507;&#35948;" id="diet_e2">No pork</label>
+									</div>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="&#33593;&#32032;" id="diet_3">茹素</label>
+										<label style="font-size: 11pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input type="checkbox" name="entry.1144105956" value="&#33593;&#32032;" id="diet_e3">Vegetarian</label>
+									</div>
+									<div style="margin-top: 5px;" >
+										<label style="font-size: 11pt; color: gray;" lang="zh"><input type="checkbox" name="entry.1144105956" value="__other_option__" id="diet_4">其他需求: <input type="text" name="entry.1144105956.other_option_response" value="" id="diet_input" style="width:60%"></label>
+									</div>
+								</div>
+							</div>
+							<p>&nbsp;</p>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">想跟新人說的悄悄話</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Wedding wishes</label></p>								
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
+								<textarea class="form-control" rows="6" name="entry.467563562" id="wish"></textarea>
+							</div>
+						</div>
+						
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">其他需求</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Other requirements</label></p>								
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">若有任何需要我們協助的地方、再麻煩您不吝告知</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please let us know if you need more help.</p>
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
+								<textarea class="form-control" rows="6" name="entry.1555130583" id="need"></textarea>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<div>
+								<input type="hidden" name="pageHistory" value="0">
+							</div>
+						</div>
+						
+						<!-- <button type="submit" class="btn btn-primary" lang="zh">遞交表單</button> -->
+						<!-- <button type="submit" class="btn btn-primary" lang="en">Submit</button> -->
+						<button type="button" class="btn btn-info" onclick="checkform()" lang="zh">遞交表單</button>
+						<button type="button" class="btn btn-info" onclick="checkform()" lang="en">Submit</button>
+												
+						<!-- Modal -->
+						<div id="SubmitModal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-body">
+										<p style="font-size: 12pt; color: gray;" lang="zh">請確認您的資料是否正確。</p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">Please confirm your information.</p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="name_chk_cht" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="name_chk_eng" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="tel_chk_cht" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="tel_chk_eng" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="email_chk_cht" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="email_chk_eng" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><textarea class="new_style2" type="text" rows="2" id="addr_chk_cht" readonly="readonly"></textarea></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><textarea class="new_style2" rows="2"  type="text" id="addr_chk_eng" readonly="readonly"></textarea></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="attendance_chk_cht" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="attendance_chk_eng" readonly="readonly"></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="people_chk_cht" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="people_chk_eng" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="child_chk_cht" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="child_chk_eng" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><input class="new_style2" type="text" id="prefer_chk_cht" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><input class="new_style2" type="text" id="prefer_chk_eng" readonly="readonly" hidden></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><textarea class="new_style2" type="text" rows="2" id="wish_chk_cht" readonly="readonly" hidden></textarea></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><textarea class="new_style2" rows="2" type="text" id="wish_chk_eng" readonly="readonly" hidden></textarea></p>
+										<p style="font-size: 12pt; color: gray;" lang="zh"><textarea class="new_style2" type="text" rows="2" id="need_chk_cht" readonly="readonly" hidden></textarea></p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en"><textarea class="new_style2" rows="2" type="text" id="need_chk_eng" readonly="readonly" hidden></textarea></p>
+									</div>
+									<div class="modal-footer" style="text-align: center;">
+										<button type="submit" class="btn btn-default" onclick="monitor()" lang="zh">確認</button>
+										<button type="submit" class="btn btn-default" onclick="monitor()" lang="en">Confirm</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal" lang="zh">修改</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal" lang="en">Modify</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/bootstrap.min.js"></script>		
+		<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+		<script src="js/jquery.validate.min.js"></script>
+		
+		<script src="js/jquery.twzipcode-1.7.0.js"></script>
+		<script type="text/javascript">		
+			$('#twzipcode').twzipcode();
+		</script>
+		
+		<script type="text/javascript">
+			var today = new Date();
+			var t = today.getHours();
+			$(window).load(function() { 
+			if(t<6){
+				$('body').css('background', 'url(img/bg_img1.png)');
+			}
+			else if(t<18){
+				$('body').css('background', 'url(img/bg_img2.png)');
+			}
+			else
+				$('body').css('background', 'url(img/bg_img1.png)');
+			});
+		</script>
+		
+		<script type="text/javascript">
+			
+			$(window).load(function() { 
+				var lang = window.navigator.language[0] + window.navigator.language[1];
+				if(lang == "en"){
+					document.body.className = document.body.className.replace("zh", "en");
+				}
+			});
+			
+			function ChangeLang () {
+				if( document.body.className == "en") {
+					document.body.className = document.body.className.replace("en", "zh");
+				}
+				else {
+					document.body.className = document.body.className.replace("zh", "en");
+				}					
+			}
+
+			var required_msg = "必要欄位, Required Field.";
+			var email_msg = "E-mail格式不符, Please enter a valid email address.";
+			$(window).load(function(){
+				$('form').validate({    
+					rules: {
+						"entry.362471959": {
+							required: true
+						},
+						"entry.1559158161": {
+							required: true
+						},
+						"entry.1907224416": {
+							required: true,
+							email: true
+						},
+						"entry.138321243": {
+							required: true,
+							minlength: 17
+						},
+						"entry.1020267687": {
+							required: true
+						}
+					},
+					highlight: function(element) {
+						var id_attr = "#" + $( element ).attr("id") + "_g";
+						$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+						$(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+					},
+					unhighlight: function(element) {
+						var id_attr = "#" + $( element ).attr("id") + "_g";
+						$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+						$(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+					},
+					errorElement: 'span',
+					errorClass: 'help-block',
+					errorPlacement: function(error, element) {
+						if(element.length) {
+							error.insertAfter(element);
+						} else {
+							error.insertAfter(element);
+						}
+					},
+					messages: {
+						"entry.362471959": {
+							required: required_msg
+						},
+						"entry.138321243": {
+							minlength: "請輸入完整的地址唷, please enter a valid address."
+						},
+						"entry.1020267687": {
+							required: ""
+						}
+					}
+				});
+			});
+			
+			$(document).ready(function() {
+				$(window).keydown(function(event){
+					if(event.keyCode == 13) {
+						event.preventDefault();
+						return false;
+					}
+				});
+			});	
+			
+			function checkform() 
+			{				
+				if( $("#form_submit").valid() ) {
+					get_modal_value();					
+					$('#SubmitModal').modal('show');
+				}
+				else {
+					$("#form_submit").validate().focusInvalid();
+					//alert("Name must be filled out");
+				}
+			}
+			
+			function get_modal_value() 
+			{
+				document.getElementById("name_chk_cht").value = "姓名: " + document.getElementById("name").value;
+				document.getElementById("name_chk_eng").value = "Name: " + document.getElementById("name").value;
+				
+				document.getElementById("tel_chk_cht").value = "聯絡電話: " + document.getElementById("tel").value;
+				document.getElementById("tel_chk_eng").value = "Phone number: " + document.getElementById("tel").value;
+				
+				document.getElementById("email_chk_cht").value = "E-Mail: " + document.getElementById("mail").value;
+				document.getElementById("email_chk_eng").value = "E-Mail: " + document.getElementById("mail").value;
+				
+				document.getElementById("addr_chk_cht").value = "聯絡地址: " + document.getElementById("addr").value;
+				document.getElementById("addr_chk_eng").value = "Address: " + document.getElementById("addr").value;
+				
+				
+				// CHT --
+				if( !document.getElementById("attendance").checked){
+					// document.getElementById("attendance_chk_cht").value = "您會出席我們的喜宴";
+					document.getElementById("attendance_chk_cht").value = "";
+					
+					if( document.getElementById("people_2").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 1";
+					}
+					else if( document.getElementById("people_3").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 2";
+					}
+					else if( document.getElementById("people_4").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 3";
+					}
+					else if( document.getElementById("people_5").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 4";
+					}
+					else if( document.getElementById("people_6").checked) {
+						document.getElementById("people_chk_cht").value = "出席人數: 5";
+					}
+					document.getElementById("people_chk_cht").removeAttribute("hidden");
+					
+					if( document.getElementById("child_1").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 0";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_2").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 1";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_3").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 2";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");		
+					}
+					else if( document.getElementById("child_4").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 3";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");	
+					}
+					else if( document.getElementById("child_5").checked) {
+						document.getElementById("child_chk_cht").value = "兒童人數: 4";
+						document.getElementById("child_chk_cht").removeAttribute("hidden");
+					}
+
+														
+					if( document.getElementById("diet_1").checked || document.getElementById("diet_2").checked || document.getElementById("diet_3").checked || document.getElementById("diet_4").checked ) {
+						document.getElementById("prefer_chk_cht").value = "飲食習慣: ";
+						document.getElementById("prefer_chk_cht").removeAttribute("hidden");		
+						
+						if(document.getElementById("diet_1").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_1").value + " ";
+							
+						if(document.getElementById("diet_2").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_2").value + " ";
+							
+						if(document.getElementById("diet_3").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_3").value + " ";
+							
+						if(document.getElementById("diet_4").checked)
+							document.getElementById("prefer_chk_cht").value += document.getElementById("diet_input").value;
+					} else {
+						// document.getElementById("prefer_chk_cht").setAttribute("class", "hidden");	
+						document.getElementById("prefer_chk_cht").value ="";						
+					}
+
+				}
+				else {
+					document.getElementById("attendance_chk_cht").value = "您無法出席婚宴，但願意收到喜帖";
+					
+					// document.getElementById("people_chk_cht").setAttribute("class", "hidden");
+					
+					// document.getElementById("child_chk_cht").setAttribute("class", "hidden");
+					
+					// document.getElementById("prefer_chk_cht").setAttribute("class", "hidden");
+					
+					document.getElementById("people_chk_cht").value ="";
+					
+					document.getElementById("child_chk_cht").value ="";
+					
+					document.getElementById("prefer_chk_cht").value ="";			
+				}
+				// CHT --
+				
+				// Eng ---
+				if( !document.getElementById("attendance_e").checked){
+					// document.getElementById("attendance_chk_eng").value = "You will join our wedding";	
+					document.getElementById("attendance_chk_eng").value = "";	
+					
+					if( document.getElementById("people_2").checked) {
+						document.getElementById("people_chk_eng").value = "1 person will join the wedding";
+					}
+					else if( document.getElementById("people_3").checked) {
+						document.getElementById("people_chk_eng").value = "2 people will join the wedding";
+					}
+					else if( document.getElementById("people_4").checked) {
+						document.getElementById("people_chk_eng").value = "3 people will join the wedding";
+					}
+					else if( document.getElementById("people_5").checked) {
+						document.getElementById("people_chk_eng").value = "4 people will join the wedding";
+					}
+					else if( document.getElementById("people_6").checked) {
+						document.getElementById("people_chk_eng").value = "5 people will join the wedding";
+					}		
+					document.getElementById("people_chk_eng").removeAttribute("hidden");
+					
+					if( document.getElementById("child_1").checked) {
+						document.getElementById("child_chk_eng").value = "You don't need any baby high chair";
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_2").checked) {
+						document.getElementById("child_chk_eng").value = "You need 1 baby high chair";
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_3").checked) {
+						document.getElementById("child_chk_eng").value = "You need 2 baby high chairs";
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_4").checked) {
+						document.getElementById("child_chk_eng").value = "You need 3 baby high chairs";
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					else if( document.getElementById("child_5").checked) {
+						document.getElementById("child_chk_eng").value = "You need 4 baby high chairs";
+						document.getElementById("child_chk_eng").removeAttribute("hidden");
+					}
+					
+					if( document.getElementById("diet_e1").checked || document.getElementById("diet_e2").checked || document.getElementById("diet_e3").checked ) {
+						document.getElementById("prefer_chk_eng").value = "Dietary preferences: ";
+						document.getElementById("prefer_chk_eng").removeAttribute("hidden");	
+						
+						if(document.getElementById("diet_e1").checked)
+							document.getElementById("prefer_chk_eng").value += "No beef, ";	
+							
+						if(document.getElementById("diet_e2").checked)
+							document.getElementById("prefer_chk_eng").value += "No pork, ";		
+							
+						if(document.getElementById("diet_e3").checked)
+							document.getElementById("prefer_chk_eng").value += "Vegetarian";	
+							
+					} else {
+						// document.getElementById("prefer_chk_eng").setAttribute("class", "hidden");	
+						document.getElementById("prefer_chk_eng").value ="";						
+					}
+
+				}
+				else {
+					document.getElementById("attendance_chk_eng").value = "You're not able to join the wedding, but still want to get the invitation";
+					
+					// document.getElementById("people_chk_eng").setAttribute("class", "hidden");	
+					
+					// document.getElementById("child_chk_eng").setAttribute("class", "hidden");	
+					
+					// document.getElementById("prefer_chk_eng").setAttribute("class", "hidden");	
+					
+					document.getElementById("people_chk_eng").value ="";
+					
+					document.getElementById("child_chk_eng").value ="";	
+					
+					document.getElementById("prefer_chk_eng").value ="";					
+				}
+				// Eng --------------------
+				
+				if( document.getElementById("wish").value != "" ) {
+					document.getElementById("wish_chk_cht").value = "想跟新人說的悄悄話: " + document.getElementById("wish").value;
+					document.getElementById("wish_chk_cht").removeAttribute("hidden");
+					document.getElementById("wish_chk_eng").value = "Wedding wishes: " + document.getElementById("wish").value;		
+					document.getElementById("wish_chk_eng").removeAttribute("hidden");
+				}
+				else {
+					document.getElementById("wish_chk_cht").value = "";
+					// document.getElementById("wish_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("wish_chk_eng").value = "";		
+					// document.getElementById("wish_chk_eng").setAttribute("class", "hidden");		
+				}
+				
+				if( document.getElementById("need").value != "" ) {
+					document.getElementById("need_chk_cht").value = "其他需求: " + document.getElementById("need").value;
+					document.getElementById("need_chk_cht").removeAttribute("hidden");
+					document.getElementById("need_chk_eng").value = "Other requirements: " + document.getElementById("need").value;
+					document.getElementById("need_chk_eng").removeAttribute("hidden");
+				}
+				else {				
+					document.getElementById("need_chk_cht").value = "";
+					// document.getElementById("need_chk_cht").setAttribute("class", "hidden");
+					document.getElementById("need_chk_eng").value = "";
+					// document.getElementById("need_chk_eng").setAttribute("class", "hidden");
+				}
+			}
+			
+			function submitted() 
+			{
+				$("#client.form_submit")[0].reset();
+			}		
+			
+			var counter = 0;
+			var reload_tag = 0;
+			function monitor() {
+				counter++;
+				reload_tag = 1;
+				if(counter > 1) { return false; }
+				if(document.forms["form_submit"]["pageHistory"].value != 0) { return false; }
+				return true;
+			}
+			
+			function redirect() {
+				var tmp = document.forms["form_submit"]["pageHistory"].value;
+				tmp++;
+				document.forms["form_submit"]["pageHistory"].value = 2;
+				//alert(document.forms["form_submit"]["pageHistory"].value);
+				window.location.reload();
+				//if(typeof sent_contact!='undefined'){window.location='index.html';}
+			}
+			
+			$('#SubmitModal').on('hidden.bs.modal', function () {
+				if( reload_tag == 1 )
+					window.location.reload();			
+			})
+			
+			function chk_change(checkbox) {
+				if (checkbox.checked) {
+					document.getElementById("perfer_block").style.display = 'none';
+				}
+				else {
+					document.getElementById("perfer_block").style.display = 'block';
+				}
+			}
+		</script>
+		
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-63687888-3', 'auto');		
+			ga('send', 'pageview');
+		</script>
+		
+	</body>
+</html>
