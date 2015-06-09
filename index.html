@@ -16,6 +16,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>				<!-- font-family: 'Vollkorn', serif; -->
 		<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>		<!-- font-family: 'Architects Daughter', cursive; -->
 		<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>		<!-- font-family: 'La Belle Aurore', cursive;  -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>				<!-- font-family: 'Ubuntu', sans-serif; -->
 	
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,6 +39,43 @@
 					margin: 0;
 					padding: 0;
 				}
+			}
+			
+			.timer_box{
+				margin: 35px 24px;
+				display: inline-block;
+				padding: 20px 12px 0px 12px;
+				text-align: center;
+				width: 115px;
+				height: 110px;
+				border-radius: 50%;
+				border: 4px solid rgba(255, 204, 255, .6);
+			}
+			
+			.timer_box h1{
+				font-size: 40px;
+				margin-top: -2px;
+				margin-bottom: 0px;
+				font-family: 'Ubuntu', sans-serif;
+				color: #FFCCFF;
+			}			
+			
+			.timer_box h5{
+				font-size: 18px;
+				margin-top: -10px;
+				margin-bottom: 5px;
+				font-family: 'Ubuntu', sans-serif;
+				color: #3D3D5C;
+			}
+			
+			.timer_box p{ margin-top: 0px;}
+			#layer{
+				background-color: rgba(0, 0, 0, .9);
+				left: 0; top: 0;
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				z-index: 1;
 			}
 		</style>
 	</head>
@@ -75,60 +113,48 @@
 				</ul>
 			</div>
 		</div>
-
+		
+		<!-- This is a typical Twitter Bootstrap Carousel -->
+		<!-- Carousel -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
 			
-	
-	<!-- This is a typical Twitter Bootstrap Carousel -->
-	<!-- Carousel -->
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				<img src="https://lh3.googleusercontent.com/gxg_4XkY-3NOqYgLH1_4ZFaJlCeOQUwaoJiPExcJ49E=w270-h179-p-no" alt="" />
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>Bootstrap Carousel Fullscreen</h1>
-						<p class="lead">Just turns the Twitter Bootstrap Carousel in fullscreen mode, and scale to fit the screen resolution</p>
-					</div>
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<div class="active item">
+					<img src="https://lh3.googleusercontent.com/jHQwNAIqSt9YLluQbKXbFd0qL_RIx2aHHDfTnZ_lNls=w314-h208-p-no" alt="">
 				</div>
+				<div class="item">
+					<img src="https://lh3.googleusercontent.com/u162ub325sGmm-QTRYJqLjADGP6xJBSK1DodBgAQ59M=w271-h179-p-no" alt="">
+				</div>
+				<div class="item">
+					<img src="https://lh3.googleusercontent.com/gxg_4XkY-3NOqYgLH1_4ZFaJlCeOQUwaoJiPExcJ49E=w270-h179-p-no" alt="">
+                </div>
 			</div>
-
-			<div class="item">
-				<img src="https://lh3.googleusercontent.com/u162ub325sGmm-QTRYJqLjADGP6xJBSK1DodBgAQ59M=w271-h179-p-no" alt="" />
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>Bootstrap Carousel Fullscreen</h1>
-						<p class="lead">Just turns the Twitter Bootstrap Carousel in fullscreen mode, and scale to fit the screen resolution</p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="https://lh3.googleusercontent.com/jHQwNAIqSt9YLluQbKXbFd0qL_RIx2aHHDfTnZ_lNls=w314-h208-p-no" alt="" />
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>Bootstrap Carousel Fullscreen</h1>
-						<p class="lead">Just turns the Twitter Bootstrap Carousel in fullscreen mode, and scale to fit the screen resolution</p>
-					</div>
-				</div>
+			
+			<!-- Carousel nav -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		
+		<div class="navbar navbar-fixed-bottom">
+			<div class="container">
+				<div id="days" class="timer_box"></div>
+				<div id="hours" class="timer_box"></div>
+				<div id="minutes" class="timer_box"></div>
+				<div id="seconds" class="timer_box"></div>
 			</div>
 		</div>
-
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
-
+		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -136,37 +162,51 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<script type="text/javascript">
-// set the date we're counting down to
-var target_date = new Date('Jan, 31, 2014').getTime();
- 
-// variables for time units
-var days, hours, minutes, seconds;
- 
-// get tag element
-var countdown = document.getElementById('countdown');
- 
-// update the tag with id "countdown" every 1 second
-setInterval(function () {
- 
-    // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
- 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-     
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-     
-    // format countdown string + set tag value
-    countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
-    + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
- 
-}, 1000);
+			// set the date we're counting down to
+			var target_date = new Date(2015, 11, 01, 12, 00);
+			
+			// update the tag with id "countdown" every 1 second
+			setInterval(function () {
+				// find the amount of "seconds" between now and target
+				var current_date = new Date();
+				
+				if( target_date < current_date ){
+					days.innerHTML = '<h1>0</h1><p>Day</p>';
+					hours.innerHTML = '<h1>0</h1><p>Hour</p>';
+					minutes.innerHTML = '<h1>0</h1><p>Minute</p>';
+					seconds.innerHTML = '<h1>0</h1><p>Second</p>';				
+				}
+				else {
+					var seconds_left = (target_date - current_date) / 1000;
+				
+					// do some time calculations
+					d = parseInt(seconds_left / 86400);
+					seconds_left = seconds_left % 86400;
+					if( d == 0 )
+						days.innerHTML = '<h1>0</h1><p><h5><strong>Day</strong></h5></p>';
+					else
+						days.innerHTML = '<h1>'+d+'</h1><p><h5><strong>Days</strong></h5></p>';
+				
+					h = parseInt(seconds_left / 3600);
+					seconds_left = seconds_left % 3600;
+					if( h == 0 )
+						hours.innerHTML = '<h1>0</h1><p><h5><strong>Hour</strong></h5></p>';
+					else
+						hours.innerHTML = '<h1>'+h+'</h1><p><h5><strong>Hours</strong></h5></p>';
+				
+					m = parseInt(seconds_left / 60);
+					if( m == 0 )
+						minutes.innerHTML = '<h1>0</h1><h5><p><strong>Minute</strong></h5></p>';
+					else		
+						minutes.innerHTML = '<h1>'+m+'</h1><p><h5><strong>Minutes</strong></h5></p>';
+					
+					s = parseInt(seconds_left % 60);
+					if( s == 0 )
+						seconds.innerHTML = '<h1>0</h1><p><h5><strong>Second</strong></h5></p>';
+					else
+						seconds.innerHTML = '<h1>'+s+'</h1><p><h5><strong>Seconds</strong></h5></p>';
+				}				
+			}, 1000);
 		</script>
 
 		
@@ -197,25 +237,26 @@ setInterval(function () {
 					document.body.className = document.body.className.replace("zh", "en");				
 			}
 		</script>
-			<script type="text/javascript">	
-		$(document).ready(function() {
-	$('.carousel').carousel({
-    	pause: "false",
-    	interval: 4000
-	});
-
-	$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
-	$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%'});
-	$('.carousel-inner div.item img').each(function() {
-		var imgSrc = $(this).attr('src');
-		$(this).parent().css({'background': 'url('+imgSrc+') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
-		$(this).remove();
-	});
-
-	$(window).on('resize', function() {
-		$('.carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
-	});
-}); 
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.carousel').carousel({
+					pause: "false",
+					interval: 8000
+				});
+				
+				$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
+				$('.carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%', 'opacity': '0.6'});
+				$('.carousel-inner div.item img').each(function() {
+					var imgSrc = $(this).attr('src');
+					$(this).parent().css({'background': 'url('+imgSrc+') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
+					$(this).remove();
+				});
+			
+				$(window).on('resize', function() {
+					$('.carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
+				});
+			}); 
 		</script>
 		
 		<script>
