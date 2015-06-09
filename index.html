@@ -88,6 +88,57 @@
 				position: fixed;
 				z-index: 1;
 			}
+			
+			@media (max-width: 768px) {
+				h2 {
+					color: #8585AD;
+					font-size: 18px;
+					margin-bottom: -10px;
+					font-family: 'Ubuntu', sans-serif;
+					text-shadow: 0px 0px 10px #FFF5FF, 0px 0px 10px #FFF5FF, 0px 0px 10px #FFF5FF;
+				}
+			
+				.timer_box{
+					margin: 5px 20px;
+					margin-bottom: -10px;
+					margin-top: 20px;
+					display: inline-block;
+					padding: 20px 12px 0px 12px;
+					text-align: center;
+					width: 85px;
+					height: 80px;
+					border-radius: 50%;
+					border: 4px solid rgba(255, 189, 255, .5);
+				}
+			
+				.timer_box h1{
+					font-size: 28px;
+					margin-top: -8px;
+					margin-bottom: 0px;
+					font-family: 'Ubuntu', sans-serif;
+					color: #FFBDFF;
+					text-shadow: 0px 0px 10px #5D5D79;
+				}			
+			
+				.timer_box h5{
+					font-size: 14px;
+					margin-top: -10px;
+					margin-bottom: 5px;
+					font-family: 'Ubuntu', sans-serif;
+					color: #8585AD;
+					text-shadow: 0px 0px 10px #FFF5FF, 0px 0px 10px #FFF5FF, 0px 0px 10px #FFF5FF;
+				}
+			
+				.timer_box p{ margin-top: 0px;}
+				#layer{
+					background-color: rgba(0, 0, 0, .9);
+					left: 0; top: 0;
+					width: 100%;
+					height: 100%;
+					position: fixed;
+					z-index: 1;
+				}
+			}
 		</style>
 	</head>
 	
@@ -149,7 +200,7 @@
 		
 		<!-- This is a typical Twitter Bootstrap Carousel for desktop-->
 		<!-- Carousel -->
-		<div id="myCarousel" class="carousel slide hidden-xs" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -179,42 +230,6 @@
 				<span class="glyphicon glyphicon-chevron-left"></span>
 			</a>
 			<a class="carousel-control right" href="#myCarousel" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-		</div>
-		
-		<!-- This is a typical Twitter Bootstrap Carousel  for smart phone-->
-		<!-- Carousel -->
-		<div id="myCarousel_S" class="carousel slide hidden-sm hidden-md hidden-lg" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel_S" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel_S" data-slide-to="1"></li>
-				<li data-target="#myCarousel_S" data-slide-to="2"></li>
-				<li data-target="#myCarousel_S" data-slide-to="3"></li>
-			</ol>
-			
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-				<div class="active item">
-					<img src="https://lh5.googleusercontent.com/-ADN4CtQEprU/VWVN-v34a2I/AAAAAAABWw8/Um0PvD1c6mg/w258-h172-no/DSC_2159.jpg" alt="">
-				</div>
-				<div class="item">
-					<img src="https://lh5.googleusercontent.com/-07sFUqReLVQ/VWVOhtUJOWI/AAAAAAABWw8/B6IAdFl22ek/w258-h172-no/DSC_2275.jpg" alt="">
-				</div>
-				<div class="item">
-					<img src="https://lh6.googleusercontent.com/-nwegOb6lNMo/VWVP8BoJPCI/AAAAAAABWw8/VgFO-m-UnSU/w1000-h667-no/DSC_6606-2.jpg" alt="">
-                </div>
-				<div class="item">
-					<img src="https://lh3.googleusercontent.com/a6T855Z9z4VwI755eKsi914V1qSEciNcz7IMfd9MZ7iY=w338-h225-p-no" alt="">
-                </div>
-			</div>
-			
-			<!-- Carousel nav -->
-			<a class="carousel-control left" href="#myCarousel_S" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="carousel-control right" href="#myCarousel_S" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span>
 			</a>
 		</div>
