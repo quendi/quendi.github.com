@@ -33,6 +33,14 @@
 			.row-padded{
 				padding-top: 30px;
 			}
+			
+			hr { 
+				display: #666699;
+				margin-top:30px;
+				margin-bottom:10px;
+				border-style: inset;
+				border-width: 1px;
+			}
 		</style>
 	</head>
 	
@@ -74,115 +82,69 @@
 		<div class="container-fluid">
 			<div class="row  row-padded">
 				<!-- Wedding Information in Chinese -->
-				<div class="col-md-6 col-lg-6" lang="zh">
+				<div class="col-md-12 col-lg-12" lang="zh">
 					<p style="font-size: 16pt; color: dark gray"><strong>住宿在台南</strong></p>
-					<p class="text-muted" style="font-size: 14pt"><strong>時間 :</strong><small> 2015.11.1 (日)  中午12:00開席</small></p>
-					<p class="text-muted" style="font-size: 14pt"><strong>席設 :</strong><small> 大億麗緻酒店</small></p>
-					<p class="text-muted" style="font-size: 14pt"><strong>地址 :</strong><small> 台南市西門路一段660號&nbsp;&nbsp;&nbsp;</small>					
-						<a href="https://www.google.com.tw/maps/place/大億麗緻酒店/@22.9898291,120.1939253,16z/" role="button" target="_blank"><img src="img/map.png" width="28pt"></a>
-					</p>
+					<p class="text-muted" style="font-size: 12pt">各位遠道而來的朋友，台南是個值得一遊的城市，有著古色古香的歷史遺跡，也充滿著令人食指大動的美味小吃。</p>
+					<p class="text-muted" style="font-size: 12pt">若時間上允許，不妨規畫個輕旅行，利用周休假日來夜宿到台南吧!!!</p>
 					<p>&nbsp;</p>
 				</div>
 				<!-- Wedding Information in English -->
-				<div class="col-md-6 col-lg-6 " lang="en">
+				<div class="col-md-12 col-lg-12 " lang="en">
 					<p style="font-size: 16pt; color: dark gray; font-family: 'Architects Daughter', cursive"><strong>Housing information</strong></p>
 					<p style="line-height: 120%;">&nbsp;</p>
-					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">On Sunday, the first of November</p>
-					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">two thousand and fifteen</p>
-					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">at twelve o’clock in the afternoon</p>
-					<p style="line-height: 120%;">&nbsp;</p>
-					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">Tayih Landis Hotel Tainan</p>					
-					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 100%;">No. 660, Section 1, Shi-Men Road, Tainan, Taiwan&nbsp;
-						<a href="https://www.google.com.tw/maps/place/大億麗緻酒店/@22.9898291,120.1939253,16z/" role="button" target="_blank"><img src="img/map.png" width="28pt" ></a>
-					</p>
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">Tainan is a city with historical site and famous of its' delicious foods.</p>
+					<p class="text-muted" style="font-size: 13pt; font-family: 'Architects Daughter', cursive; line-height: 90%;">We would like to invite you to spend a weekend here.</p>
 					<p>&nbsp;</p>
 				</div>
-				<div class="hidden-xs hidden-sm col-md-6  col-lg-6">
-					<!-- MAPS -->
-					<div class="map_container">
-						<div id="map_canvas" class="map_canvas img-rounded"></div>
-					</div>
-					<!--  
-					<div class="modal-footer">
-						<p><a href="https://www.google.com.tw/maps/place/大億麗緻酒店/@22.9898291,120.1939253,16z/" role="button" target="_blank"><img src="img/map.png" width="10%" ></a></p>
-						<p><a href="https://www.google.com.tw/maps/place/大億麗緻酒店/@22.9898291,120.1939253,16z/" role="button" class="btn btn-primary" target="_blank">View on Google Maps</a></p> 
-					</div>
-					-->
-					<p>&nbsp;</p>
-				</div>	
 				
-				<div class="col-md-12 col-lg-12">
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="zh">開車、騎車</a>									
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="en">Driving</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
-									<p lang="en">Free parking is provide for those who join out wedding. You could park your car directly into the hotels' parking lot.</p>
-								</div>
-							</div>
+				<div class="row" lang="zh">				
+					<div class="col-md-12 col-lg-12">
+						<div class="hidden-xs col-sm-3" id="myScrollspy">
+							<ul class="nav nav-tabs nav-stacked affix-top" data-offset-top="125">
+								<li><a href="#section-1"><label style="font-size: 11pt">大億麗緻酒店</label></a></li>
+								<li><a href="#section-2"><label style="font-size: 11pt">高鐵假期</label></a></li>
+								<li><a href="#section-3"><label style="font-size: 11pt">[民宿] 安平．六本木</label></a></li>
+								<li><a href="#section-4"><label style="font-size: 11pt">[民宿] 台南蜜屋</label></a></li>
+							</ul>
 						</div>
-						
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="zh">搭乘高鐵</a>
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="en">Take THSR (Taiwan High Speed Rail)</a>
-								</h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p lang="zh">搭乘台灣高鐵的來賓可轉乘免費的高鐵接駁專車前往宴會場。</p>
-									<p lang="zh">高鐵免費接駁專車於台南高鐵站2號出口搭乘，請選擇市政府線(通常為最右邊的那輛公車)。</p>
-									<p lang="zh">請於"興南客運台南站(大億麗緻酒店)"下車，正常通車時間約為30~40分鐘。</p>
-									<p lang="en">THSR provide a free shuttle bus, and will take a 40 minutes drive to the hotel.</p>
-									<p lang="en">The shuttle bus stop is at "Exit 2", take route “THSR Tainan Station - Tainan City Government”.</p>
-									<p lang="en">Get off the bus at “Shingnan Bus-Tainan Stop”, and hotel is on the other side of the road.</p>
-								</div>
-							</div>
+					
+						<div class="col-xs-12 col-sm-9">
+							<p style="font-size: 14pt; color: dark gray" id="section-1"><strong>大億麗緻酒店</strong></p>
+								<p class="text-muted" style="font-size: 11pt">大億麗緻酒店針對婚宴客戶有提供住宿半價的優惠，2人房:$5225、4人房:$7700</p>
+								<p class="text-muted" style="font-size: 11pt">若有需要的朋友可以跟我們連繫，我們會提供您必要的協助。</p>
+								<hr>
+							<p style="font-size: 14pt; color: dark gray" id="section-2"><strong>高鐵假期</strong></p>
+								<p class="text-muted" style="font-size: 11pt">高鐵假期的房價看起來也很平實，也可以前往 <a target="_blank" href="http://tholiday.thsrc.com.tw/TC/index.aspx">高鐵假期</a> 參考，只是目前尚未有11月的方案。</p>
+								<hr>
+							<p class="text-muted" style="font-size: 11pt; margin-bottom:15px">台南有很多經濟實惠民宿可供選擇，但我們很難為各位推薦(<label style="color:red;">我們都沒住過</label>)。以下列出的資訊只是我在網路上看到感覺好像還不差的，<label style="color:red;">不代表推薦</label>，僅供參考。</p>
+							<p style="font-size: 14pt; color: dark gray" id="section-3"><strong>[民宿] 安平．六本木</strong></p>
+								<p class="text-muted" style="font-size: 11pt">看起來房間蠻大的，房間數也不少。</p>
+								<p class="text-muted" style="font-size: 11pt">有興趣可前往 <a target="_blank" href="http://jasminelady.pixnet.net/blog/post/42014596-%E3%80%90%E5%8F%B0%E5%8D%97%E2%94%82%E4%BD%8F%E5%AE%BF%E6%8E%A8%E8%96%A6%E3%80%91%E5%AE%89%E5%B9%B3%EF%BC%8E%E5%85%AD%E6%9C%AC%E6%9C%A8%E2%94%82%E6%B0%91%E5%AE%BF%E4%B8%BB%E4%BA%BA">別人的網誌</a> 觀看心得文唷。</p>
+								<hr>
+							<p style="font-size: 14pt; color: dark gray" id="section-4"><strong>[民宿] 台南蜜屋</strong></p>
+								<p class="text-muted" style="font-size: 11pt">離飯店非常近。附近有藍曬圖，也有不少可以吃消夜的地方。</p>
+								<p class="text-muted" style="font-size: 11pt">有興趣可前往 <a target="_blank" href="http://honeyhouse.okgo.tw/">民宿官網</a> 。</p>
+								<hr>
+							<p class="text-muted" style="font-size: 11pt; margin-top:35px">上面僅僅列出幾間我感覺還不錯的，而且離會場距離不遠的民宿。若您有其他中意的民宿想知道附近有甚麼好玩的，或是交通方不方便都可以直接與我們連繫，我們會盡量提供您資訊。</p>
 						</div>
-						
-						<div class="panel panel-default">
-							<div class="panel-heading">							
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="zh">搭乘台鐵</a>
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="en">Take Railway</a>
-								</h4>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p lang="zh">搭乘台鐵的賓客可選擇搭乘排班計程車前往飯店，車資約為100~150(我只在半夜搭過，所以不是很肯定)。</p>
-									<p lang="zh">公車則須經由車站左、右側的地下穿越道至圓環區的公車站搭乘，可選擇的車次為"1"、"2"與"5"，分別於"火車站(北站)"或"火車站(南站)"上車，並於"小西門(大億麗緻)"下車。</p>
-									<p lang="en">Taxi is the easiest way to the hotel, and will cost around $120~$150.</p>
-									<p lang="en">You could also take bus "1", "2", and "5" on "火車站(北站)" or "火車站(南站)". Get off at "小西門(大億麗緻)" and the hotel is on the other side of the road. (Sorry that I couldn't find any English translation of the bus stop)</p>
-								</div>
-							</div>
+					</div>
+				</div>
+				
+				<div class="row" lang="en">				
+					<div class="col-md-12 col-lg-12">
+						<div class="hidden-xs col-sm-3" id="myScrollspy">
+							<ul class="nav nav-tabs nav-stacked affix-top" data-offset-top="125">
+								<li><a href="#section-1"><label style="font-size: 11pt">Tayih Landis Hotel</label></a></li>
+							</ul>
 						</div>
-						
-						<div class="panel panel-default">
-							<div class="panel-heading">							
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="zh">搭乘國道客運</a>
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="en">Take Bus</a>
-								</h4>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p lang="zh">國道客運於台南市區的下車處為"兵配廠"，步行至飯店約花35分鐘。</p>
-									<p lang="zh">該處有相當多排班計程車，到飯店的車資約落在100~150(我只在半夜搭過，所以不是很肯定)。</p>
-									<p lang="zh">公車則可選擇搭乘"18"與"藍幹線"於"臺南公園(公園路)"上車，並於"小西門(大億麗緻)"下車。</p>
-									<p lang="en">The final stop is "兵配廠", and it's a 35 minutes walk from the hotel.</p>
-									<p lang="en">Taxi is the easiest way to the hotel, and will cost around $120~$150.</p>
-									<p lang="en">You could take bus "18" on "臺南公園(公園路)", which is the nearest bus stop. Get off at "小西門(大億麗緻)" and the hotel is on the other side of the road. (Sorry that I couldn't find any English translation of the bus stop)</p>
-								</div>
-							</div>
+					
+						<div class="col-xs-12 col-sm-9">
+							<p style="font-size: 14pt; color: dark gray" id="section-1"><strong>Tayih Landis Hotel</strong></p>
+								<p class="text-muted" style="font-size: 11pt">Tayih Landis Hotel provide a special price for wedding customers, room for 2:$5225, room for 4:$7700</p>
+								<hr>
+							<p class="text-muted" style="font-size: 11pt; margin-top:35px">If you need housing in Tainan, please feel free to contact us. More information provided in Chinese page.</p>
 						</div>
-					</div>				
+					</div>
 				</div>
 
 			</div>
