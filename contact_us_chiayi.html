@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>
+			Chun-Chieh Lee & Yi-Chun Hsiao | Contact us
+		</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.css" rel="stylesheet">
+		<link href="css/Customize.css" rel="stylesheet">
+		
+		<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>				<!-- font-family: 'Vollkorn', serif; -->
+		<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>		<!-- font-family: 'Architects Daughter', cursive; -->
+		<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>		<!-- font-family: 'La Belle Aurore', cursive;  -->
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">			
+			body{
+				padding-top: 80px;
+			}
+						
+			.row-padded{
+				padding-top: 30px;
+			}
+		</style>
+	</head>
+	
+	<body class="zh">
+		<!-- Navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index_chiayi.html"><img src="img/Brand_icon1.png" width="42pt" style="margin-top: -10px;"></a>
+				<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+			</div>
+			
+			<!-- Collection of nav links, forms, and other content for toggling -->
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li lang="zh"><a href="index_chiayi.html">首頁</a></li>
+					<li lang="en"><a href="index_chiayi.html">Home</a></li>
+					<li lang="zh"><a href="venue_chiayi.html">婚宴資訊</a></li>
+					<li lang="en"><a href="venue_chiayi.html">Wedding Reception</a></li>
+					<li lang="zh"><a href="attendance_chiayi.html">婚宴出席調查</a></li>
+					<li lang="en"><a href="attendance_chiayi.html">Attendance</a></li>
+					<li class="active" lang="zh"><a href="contact_us_chiayi.html">聯絡我們</a></li>
+					<li class="active" lang="en"><a href="contact_us_chiayi.html">Contact us</a></li>
+					<li lang="en"><a href="#" onclick="ChangeLang()"><small>中文</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li lang="zh"><a href="#" onclick="ChangeLang()"><small>English</small>&nbsp;&nbsp;&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>	
+		
+		<div class="container-fluid">
+			<div class="row row-padded">
+				<div class="col-sm-12 col-md-10">
+					<p style="font-size: 16pt; color: dark gray" lang="zh"><strong>聯絡我們</strong></p>
+					<p style="font-size: 16pt; color: dark gray; font-family: 'Architects Daughter', cursive" lang="en"><strong>Contact us</strong></p>
+					<p style="font-size: 12pt; color: gray;" lang="zh">如果有任何需求或問題，請您直接打給我們、或使用任何的通訊軟體。您也可以填寫下面的表單與我們反映。我們會立即與您連絡。</p>
+					<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">If you have any help, please feel free to contact us through mobile or any other way you can reach us.</p>
+					<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">You can also fill in the form, and you will get back to you ASAP.</p>	
+					
+					<p>&nbsp;</p>				
+					<iframe name="iframe_contact" style="display:none;" onload="redirect()"></iframe>
+					<form name="form_submit" id="form_submit" class="form-horizontal col-md-10 col-lg-10" action="https://docs.google.com/forms/d/1L2s2_QRlgQzz9FJSe-IOtrGpmO_957baNiOMJojXwes/formResponse" method="post" target="iframe_contact" onsubmit="sent_contact=true">
+
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt;" lang="zh">您的稱呼</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; font-family: 'Architects Daughter', cursive;" lang="en">Name</label></p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您的姓名或暱稱，或是使用匿名。</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter your name or leave it blank.</p>
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.205605236" id="name" placeholder="Anonymous" lang="en">
+								<input type="text" class="form-control" name="entry.205605236" id="name" placeholder="匿名" lang="zh">
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">連絡方式</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Contact information</label></p>							
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您的連絡方式，如手機、信箱、Facebook或是Line</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please fill in any possible way that can reach you, or keep it blank.</p>
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-5" style="margin-top: -5px; margin-left: -12px;">
+								<input type="text" class="form-control" name="entry.1116024617" id="info">
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px;" lang="zh">您想說的話</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="zh">&nbsp;*</label></p>
+							<p><label style="line-height: 30%; font-size: 12pt; margin-top: 20px; font-family: 'Architects Daughter', cursive;" lang="en">Your message</label><label style="font-size: 12pt; color: red;  line-height: 50%;" lang="en">&nbsp;*</label></p>	
+							<p style="font-size: 11pt; color: gray; margin-top: -10px;" lang="zh">請輸入您想跟我們說的內容</p>
+							<p style="font-size: 11pt; color: gray; margin-top: -10px; font-family: 'Architects Daughter', cursive;" lang="en">Please enter the message you want to leave for us.</p>						
+							<div class="col-xs-10 col-sm-10 col-md-9 col-lg-8" style="margin-top: -5px; margin-left: -12px;">
+								<textarea class="form-control" rows="6" name="entry.1916295821" id="message" required></textarea>
+								<span class="glyphicon form-control-feedback" id="message_g"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+							<div>
+								<input type="hidden" name="pageHistory" value="0">
+							</div>
+						</div>
+						
+						<!-- <button type="submit" class="btn btn-primary" lang="zh">遞交表單</button> -->
+						<!-- <button type="submit" class="btn btn-primary" lang="en">Submit</button> -->
+						<button type="button" class="btn btn-info" onclick="monitor()" lang="zh">遞交表單</button>
+						<button type="button" class="btn btn-info" onclick="monitor()" lang="en">Submit</button>
+												
+						<!-- Modal -->
+						<div id="SubmitModal" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-body" style="text-align: center;">
+										<p style="font-size: 12pt; color: gray;" lang="zh">感謝您的留言，我們將盡快與您聯繫。</p>
+										<p style="font-size: 12pt; color: gray; font-family: 'Architects Daughter', cursive;" lang="en">Thanks for you message, we will get back to you ASAP.</p>
+									</div>
+									<div class="modal-footer" style="text-align: center;">
+										<button type="button" class="btn btn-default" onclick="reload()" lang="zh">關閉</button>
+										<button type="button" class="btn btn-default" onclick="reload()" lang="en">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/bootstrap.min.js"></script>		
+		<!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+		<script src="js/jquery.validate.js"></script>
+		
+		<script type="text/javascript">
+			var today = new Date();
+			var t = today.getHours();
+			$(window).load(function() { 
+			if(t<6){
+				$('body').css('background', 'url(img/bg_img1.png)');
+			}
+			else if(t<18){
+				$('body').css('background', 'url(img/bg_img2.png)');
+			}
+			else
+				$('body').css('background', 'url(img/bg_img1.png)');
+			});
+		</script>
+		
+		<script type="text/javascript">
+			
+			$(window).load(function() { 
+				var lang = window.navigator.language[0] + window.navigator.language[1];
+				if(lang == "en"){
+					document.body.className = document.body.className.replace("zh", "en");
+				}
+			});
+			
+			function ChangeLang () {
+				if( document.body.className == "en") {
+					document.body.className = document.body.className.replace("en", "zh");
+				}
+				else {
+					document.body.className = document.body.className.replace("zh", "en");
+				}					
+			}
+
+			var required_msg = "必要欄位, Required Field";			
+			$(window).load(function(){
+				$('form').validate({    
+					rules: {
+						"entry.1916295821": {
+							required: true
+						}
+					},
+					highlight: function(element) {
+						var id_attr = "#" + $( element ).attr("id") + "_g";
+						$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+						$(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+					},
+					unhighlight: function(element) {
+						var id_attr = "#" + $( element ).attr("id") + "_g";
+						$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+						$(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+					},
+					errorElement: 'span',
+					errorClass: 'help-block',
+					errorPlacement: function(error, element) {
+						if(element.length) {
+							error.insertAfter(element);
+						} else {
+							error.insertAfter(element);
+						}
+					},
+					messages: {
+						"entry.1916295821": {
+							required: required_msg
+						}
+					}
+				});
+			});
+			
+			$(document).ready(function() {
+				$(window).keydown(function(event){
+					if(event.keyCode == 13) {
+						event.preventDefault();
+						return false;
+					}
+				});
+			});
+			
+			var counter = 0;
+			function monitor() {
+				$("#form_submit").valid();
+				counter++;
+				if(counter > 1) { return false; }
+				$("#form_submit").submit();
+			}
+
+			function reload() {
+				window.location.reload();
+			}
+			
+			function redirect() {
+				$('#SubmitModal').modal('show');
+			}
+			
+			$('#SubmitModal').on('hidden.bs.modal', function () {
+				window.location.reload();			
+			})
+		</script>
+		
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-63687888-6', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

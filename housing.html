@@ -109,8 +109,81 @@
 					</div>
 					-->
 					<p>&nbsp;</p>
-				</div>
+				</div>	
 				
+				<div class="col-md-12 col-lg-12">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="zh">開車、騎車</a>									
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" lang="en">Driving</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">大億麗緻酒店有提供免費停車，請直接將您的愛車開進飯店的地下停車場。</p>
+									<p lang="en">Free parking is provide for those who join out wedding. You could park your car directly into the hotels' parking lot.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="zh">搭乘高鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" lang="en">Take THSR (Taiwan High Speed Rail)</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">搭乘台灣高鐵的來賓可轉乘免費的高鐵接駁專車前往宴會場。</p>
+									<p lang="zh">高鐵免費接駁專車於台南高鐵站2號出口搭乘，請選擇市政府線(通常為最右邊的那輛公車)。</p>
+									<p lang="zh">請於"興南客運台南站(大億麗緻酒店)"下車，正常通車時間約為30~40分鐘。</p>
+									<p lang="en">THSR provide a free shuttle bus, and will take a 40 minutes drive to the hotel.</p>
+									<p lang="en">The shuttle bus stop is at "Exit 2", take route “THSR Tainan Station - Tainan City Government”.</p>
+									<p lang="en">Get off the bus at “Shingnan Bus-Tainan Stop”, and hotel is on the other side of the road.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">							
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="zh">搭乘台鐵</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" lang="en">Take Railway</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">搭乘台鐵的賓客可選擇搭乘排班計程車前往飯店，車資約為100~150(我只在半夜搭過，所以不是很肯定)。</p>
+									<p lang="zh">公車則須經由車站左、右側的地下穿越道至圓環區的公車站搭乘，可選擇的車次為"1"、"2"與"5"，分別於"火車站(北站)"或"火車站(南站)"上車，並於"小西門(大億麗緻)"下車。</p>
+									<p lang="en">Taxi is the easiest way to the hotel, and will cost around $120~$150.</p>
+									<p lang="en">You could also take bus "1", "2", and "5" on "火車站(北站)" or "火車站(南站)". Get off at "小西門(大億麗緻)" and the hotel is on the other side of the road. (Sorry that I couldn't find any English translation of the bus stop)</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">							
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="zh">搭乘國道客運</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" lang="en">Take Bus</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p lang="zh">國道客運於台南市區的下車處為"兵配廠"，步行至飯店約花35分鐘。</p>
+									<p lang="zh">該處有相當多排班計程車，到飯店的車資約落在100~150(我只在半夜搭過，所以不是很肯定)。</p>
+									<p lang="zh">公車則可選擇搭乘"18"與"藍幹線"於"臺南公園(公園路)"上車，並於"小西門(大億麗緻)"下車。</p>
+									<p lang="en">The final stop is "兵配廠", and it's a 35 minutes walk from the hotel.</p>
+									<p lang="en">Taxi is the easiest way to the hotel, and will cost around $120~$150.</p>
+									<p lang="en">You could take bus "18" on "臺南公園(公園路)", which is the nearest bus stop. Get off at "小西門(大億麗緻)" and the hotel is on the other side of the road. (Sorry that I couldn't find any English translation of the bus stop)</p>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
 
 			</div>
 		</div>
@@ -120,61 +193,6 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/jquery-1.11.3.min.js"></script>	
 		<script src="js/bootstrap.min.js"></script>
-		
-		<!-- Java code for Google Maps -->
-		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-		<script type="text/javascript">
-			var map;
-			myLatlng = new google.maps.LatLng(22.9879004,120.1980787);
-			function initialize() {
-				var mapOptions = {
-					center: myLatlng,
-					zoom: 15,
-					mapTypeControl: false,
-					panControl:false,
-					rotateControl:false,
-					streetViewControl: false,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
-			
-				map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-			
-				var contentString = '<div id="mapInfo">'+
-				'<p><strong>大億麗緻酒店</strong><br>'+
-				'700台南市中西區西門路一段660號<br>' +
-				'<br>'+
-				'<a href="http://tainan.landishotelsresorts.com/chinese-trad/" target="_blank">飯店網站</a>'+
-				'</div>';
-			
-				var infowindow = new google.maps.InfoWindow({			
-					content: contentString
-				});
-			
-				var pinIcon = new google.maps.MarkerImage(
-					'img/map_marker.png',
-					null, /* size is determined at runtime */
-					null, /* origin is 0,0 */
-					null, /* anchor is bottom center of the scaled image */
-					new google.maps.Size(48, 48)
-				);  
-				
-				var marker = new google.maps.Marker({
-					position: myLatlng,
-					map: map,
-					animation: google.maps.Animation.DROP,
-					icon: pinIcon,
-					title:"大億麗緻酒店",
-						maxWidth: 200,
-						maxHeight: 200
-				});
-			
-				google.maps.event.addListener(marker, 'click', function() {
-					infowindow.open(map,marker);
-				});
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-		<!-- End of Java code for Google Maps -->
 
 		<script type="text/javascript">
 			var today = new Date();
