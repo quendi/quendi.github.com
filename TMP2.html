@@ -64,41 +64,38 @@
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/Brand_icon1.png" width="42pt" style="margin-top: -10px;"></a>
+				<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+			</div>
+			
+			<!-- Collection of nav links, forms, and other content for toggling -->
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li lang="zh"><a href="index.html">首頁</a></li>
+					<li lang="en"><a href="index.html">Home</a></li>
+					<li lang="zh"><a href="venue.html">婚宴資訊</a></li>
+					<li lang="en"><a href="venue.html">Wedding Reception</a></li>
+					<li class="active" lang="zh"><a href="attendance.html">婚宴出席調查</a></li>
+					<li class="active" lang="en"><a href="attendance.html">Attendance</a></li>
+					<li lang="zh"><a href="travel.html">旅遊資訊</a></li>
+					<li lang="en"><a href="travel.html">Travel in Tainan</a></li>
+					<li lang="zh"><a href="housing.html">住宿資訊</a></li>
+					<li lang="en"><a href="housing.html">Housing</a></li>
+					<li lang="zh"><a href="contact_us.html">聯絡我們</a></li>
+					<li lang="en"><a href="contact_us.html">Contact us</a></li>
+					<li lang="en"><a href="#" onclick="ChangeLang()"><small>中文</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					<li lang="zh"><a href="#" onclick="ChangeLang()"><small>English</small>&nbsp;&nbsp;&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
     </nav>
 
 
