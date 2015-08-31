@@ -314,6 +314,7 @@
                 var val = $(this).val();
                 if (wrap.county.val()) {
                     wrap.zipcode.val(data[wrap.county.val()][val]);
+					document.getElementById("addr").value = data[wrap.county.val()][val] + " " + wrap.county.val() + " " + wrap.district.val() + " ";
                 }
                 // District callback binding
                 if ('function' === typeof opts.onDistrictSelect) {
@@ -463,30 +464,30 @@
                 readonly = role.zipcode.data('readonly') || opts.readonly;
 
             // Elements create
-
-            $('<input/>')
-                .attr({'type': 'text', 'name': zipcodeName})
-                .prop('readonly', readonly)
-				.addClass('new_style')
-                .addClass(role.zipcode.data('style') || (undefined !== opts.css[2] ? opts.css[2] : ''))
-                .appendTo(role.zipcode.length ? role.zipcode : container);
-				
             $('<select/>')
                 .attr('name', countyName)
                 .addClass(role.county.data('style') || (undefined !== opts.css[0] ? opts.css[0] : ''))
                 .addClass('btn-sm')
+                .addClass('btn_new')
                 .appendTo(role.county.length ? role.county : container);
 
             $('<select/>')
                 .attr('name', districtName)
                 .addClass(role.district.data('style') || (undefined !== opts.css[1] ? opts.css[1] : ''))
                 .addClass('btn-sm')
+                .addClass('btn_new')
                 .appendTo(role.district.length ? role.district : container);
+
+            $('<input/>')
+                .attr({'type': 'label', 'name': zipcodeName})
+                .prop('readonly', readonly)
+                .addClass(role.zipcode.data('style') || (undefined !== opts.css[2] ? opts.css[2] : ''))
+                .appendTo(role.zipcode.length ? role.zipcode : container);
 
             self.wrap = {
                 'county': container.find('select[name="' + countyName + '"]:first'),
                 'district': container.find('select[name="' + districtName + '"]:first'),
-                'zipcode': container.find('input[type=text][name="' + zipcodeName + '"]:first')
+                'zipcode': container.find('input[type=label][name="' + zipcodeName + '"]:first')
             };
 
             if (true === opts.zipcodeIntoDistrict) {
