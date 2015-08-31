@@ -465,7 +465,7 @@
             // Elements create
 
             $('<input/>')
-                .attr({'type': 'label', 'name': zipcodeName})
+                .attr({'type': 'text', 'name': zipcodeName})
                 .prop('readonly', readonly)
 				.addClass('new_style')
                 .addClass(role.zipcode.data('style') || (undefined !== opts.css[2] ? opts.css[2] : ''))
